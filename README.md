@@ -3,6 +3,7 @@
 A top-down 2D Buddhist RPG where every moral choice shapes your soul. Navigate six realms of existence, help suffering beings, face Mara, and find refuge in the Triple Gem.
 
 🎮 **Play in browser:** https://mungmanbaoisan.itch.io/samsara-triple-gem-game
+🕹️ **All my games:** https://mungmanbaoisan.itch.io/
 
 ![Samsara gameplay — facing Mara at the temple gates](screenshot.png)
 
