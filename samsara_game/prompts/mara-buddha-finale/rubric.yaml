@@ -1,0 +1,44 @@
+# Evaluation rubric for: Mara & Buddha Finale
+
+prompt: mara-buddha-finale
+version: "3"
+criteria:
+  - name: enforced_sequence
+    description: Buddha interaction is blocked until Mara dialogue is complete
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['defeat mara first', 'blocked', 'enforce', 'sequence', 'required', 'must first'])
+
+  - name: mara_visually_distinct
+    description: Mara is significantly larger and visually distinct from regular NPCs
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['diamond', 'red', 'pulsing', 'aura', 'large', '120', '80'])
+
+  - name: buddha_visually_distinct
+    description: Buddha is the largest NPC with a golden, radiant visual distinct from Mara
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['golden', 'octagon', 'dharma wheel', 'radiant', '140', '90'])
+
+  - name: reflection_timers
+    description: Mara interactions use 15-second timers and Buddha uses 20-second timers
+    weight: 3
+    pass_condition: any(w in output.lower() for w in ['15 second', '20 second', '900', '1200', 'reflection time'])
+
+  - name: authentic_teachings
+    description: Buddha dialogue references Four Noble Truths and/or Eightfold Path
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['four noble', 'eightfold', 'noble truths', 'samadhi', 'vipassana', 'nibbana', 'nirvana'])
+
+test_cases:
+  - input: "Add a final boss Mara and a Buddha teacher NPC with enforced sequence"
+    expected_traits:
+      - Mara blocks path until defeated
+      - Buddha only accessible after Mara
+      - Both NPCs visually larger than regular ones
+      - Buddha teaches Four Noble Truths and Eightfold Path
+      - Win condition triggers after Buddha dialogue completes
+
+  - input: "What should the victory message say when the player reaches the Triple Gem?"
+    expected_traits:
+      - References leaving samsara/suffering behind
+      - Mentions the right path to Nibbana
+      - Welcoming, not congratulatory tone

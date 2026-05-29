@@ -1,0 +1,91 @@
+{
+  "prompt": "audio-debug-iteration",
+  "timestamp": "2026-05-29T18:38:47.634295+00:00",
+  "cases_run": 2,
+  "avg_score": 1.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "pygame is not installed even though I ran pip install pygame"
+      },
+      "output": "The problem is almost certainly a Python version mismatch.\n\nYou likely have Python 3.14 as your default interpreter. pygame does not yet have a pre-built wheel for Python 3.14 \u00e2\u20ac\u201d pip is silently failing to compile it from source, which means pygame ends up not installed at all even though pip appeared to succeed.\n\nFix: Use Python 3.12 which has a stable pygame wheel.\n\nStep 1 \u00e2\u20ac\u201d Install Python 3.12 from python.org (python-3.12.8-amd64.exe for Windows)\nStep 2 \u00e2\u20ac\u201d Install pygame into 3.12 specifically:\n  py -3.12 -m pip install pygame\nStep 3 \u00e2\u20ac\u201d Verify:\n  py -3.12 -c \"import pygame; print(pygame.version.ver)\"\n  Should print: 2.6.1\nStep 4 \u00e2\u20ac\u201d Run the standalone test:\n  py -3.12 test_audio.py\nStep 5 \u00e2\u20ac\u201d Always launch the game with:\n  py -3.12 main.py\n\nThe py launcher lets you specify which Python version to use. Running just \"python\" or \"pip\" uses your default (3.14) which won't work for pygame yet.\n\nThis is a Python version compatibility issue, not a code problem.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "no_numpy_dependency",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "explicit_diagnostic_output",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "standalone_test_script",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "python_version_guidance",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "graceful_degradation",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "No sound in game but no error messages either"
+      },
+      "output": "When a game produces no error messages but also no sound, the almost certain cause is a silent exception handler swallowing the failure.\n\nLook for: except Exception: pass \u00e2\u20ac\u201d this pattern catches every possible error and does nothing with it. The game continues running as if nothing went wrong, but the audio system never started.\n\nImmediate diagnostic:\n\n1. Run the standalone test script to confirm audio works at all:\n   py -3.12 test_audio.py\n   This runs independently of the game and prints a clear PASSED or FAILED result.\n\n2. Check [Audio] in the terminal when launching the game. The audio module should print:\n   [Audio] Mixer ready: (44100, -16, 2)\n   or\n   [Audio] Failed to start: <reason>\n\n   If you see nothing, the diagnostic print statements are missing.\n\n3. Check for numpy dependency. If audio.py imports numpy and numpy is not installed, the entire import fails silently. The fix is to rewrite audio using only Python's built-in math and array modules \u00e2\u20ac\u201d no numpy required, and the game degrades gracefully (silent but fully playable) if the mixer still cannot initialise.\n\nThe rule: never use bare except Exception: pass in any system that has external dependencies or hardware requirements. Replace with explicit error messages so you always know what failed and why.\n\nPress F1 during gameplay to print a live audio diagnostic to the terminal.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "no_numpy_dependency",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "explicit_diagnostic_output",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "standalone_test_script",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "python_version_guidance",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "graceful_degradation",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

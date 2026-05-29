@@ -1,0 +1,20 @@
+The problem is almost certainly a Python version mismatch.
+
+You likely have Python 3.14 as your default interpreter. pygame does not yet have a pre-built wheel for Python 3.14 — pip is silently failing to compile it from source, which means pygame ends up not installed at all even though pip appeared to succeed.
+
+Fix: Use Python 3.12 which has a stable pygame wheel.
+
+Step 1 — Install Python 3.12 from python.org (python-3.12.8-amd64.exe for Windows)
+Step 2 — Install pygame into 3.12 specifically:
+  py -3.12 -m pip install pygame
+Step 3 — Verify:
+  py -3.12 -c "import pygame; print(pygame.version.ver)"
+  Should print: 2.6.1
+Step 4 — Run the standalone test:
+  py -3.12 test_audio.py
+Step 5 — Always launch the game with:
+  py -3.12 main.py
+
+The py launcher lets you specify which Python version to use. Running just "python" or "pip" uses your default (3.14) which won't work for pygame yet.
+
+This is a Python version compatibility issue, not a code problem.

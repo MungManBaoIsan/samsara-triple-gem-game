@@ -1,0 +1,91 @@
+{
+  "prompt": "npc-system-design",
+  "timestamp": "2026-05-29T17:26:32.340381+00:00",
+  "cases_run": 2,
+  "avg_score": 0.8,
+  "all_passed": false,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Add NPCs with multiple conversations that unlock as player wisdom grows"
+      },
+      "output": "Here is the NPC system design with multiple dialogue stages unlocked by wisdom requirements.\n\nNPCs are visible on the map as coloured shapes. Players walk up to them and press E to interact.\n\nState machine: Each NPC tracks four states \u00e2\u20ac\u201d initial, helped_once, transformed, enlightened. The state determines which dialogue tree is active.\n\nWisdom-based unlocking: Later dialogue stages have requirements. Example: Kara's second conversation requires wisdom >= 30; her third requires wisdom >= 60. Players must grow in wisdom before returning for deeper teaching.\n\nNPC types:\n- Suffering NPCs: Characters trapped in their realm's delusion (Kara in Hell, Maya in Hungry Ghost). Player helps them see clearly. These transform across conversations.\n- Teacher NPCs: Elder Song in the Human realm teaches the Four Noble Truths and Eightfold Path. Wisdom requirements gate advanced teachings.\n\nContent is stored in npcs.json so dialogue can be edited without touching code. Each NPC entry has name, realm, position, type, and a list of dialogue objects with their requirements and consequences.\n\nBoth suffering and teacher types are included across the six realms.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "npcs_visible_on_map",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "multiple_dialogue_stages",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "stat_based_unlocking",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "both_npc_types",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        },
+        {
+          "name": "json_driven_content",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should NPC dialogue change based on player choices and stats?"
+      },
+      "output": "NPC dialogue should change based on three factors: player wisdom level, previous choices made with that NPC, and the number of times the NPC has been visited.\n\nWisdom threshold requirements: dialogue stages unlock as wisdom grows. A character won't share deep teachings until the player has demonstrated enough understanding through other choices.\n\nState tracking: The NPC remembers if the player chose compassionately or dismissively in previous conversations. A compassionate choice in conversation 1 changes what the NPC says in conversation 2.\n\nBoth types of NPCs benefit from this:\n- Suffering NPCs: their transformation arc only progresses when the player makes wise, compassionate responses. Wrong choices result in the NPC staying stuck.\n- Teacher NPCs: guides only reveal deeper wisdom when the player shows they're ready. Requirements gate access to advanced teachings.\n\nThe system handles both suffering characters who need help and teacher characters who offer wisdom \u00e2\u20ac\u201d ensuring variety across the six realms.\n",
+      "score": 0.6,
+      "passed": false,
+      "criteria": [
+        {
+          "name": "npcs_visible_on_map",
+          "passed": false,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "multiple_dialogue_stages",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "stat_based_unlocking",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "both_npc_types",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        },
+        {
+          "name": "json_driven_content",
+          "passed": false,
+          "weight": 3,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

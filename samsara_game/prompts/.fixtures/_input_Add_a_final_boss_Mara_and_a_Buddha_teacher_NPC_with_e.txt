@@ -1,0 +1,20 @@
+Here is the Mara and Buddha finale system with enforced sequence.
+
+Sequence enforcement: Buddha's interaction handler checks Mara's dialogue state before allowing conversation. If Mara is not in "enlightened" state, approaching Buddha shows "Defeat Mara First" indicator. The interaction is blocked. This is required — no shortcuts.
+
+Mara (120px pulsing red diamond):
+- 5-layer dark aura radiating outward
+- Three dialogue challenges testing doubt, guilt, and pride
+- Wrong choices lose stats; wise choices gain wisdom
+- 15-second reflection timer per dialogue
+- Must complete all three before Mara dissolves
+
+Buddha (140px golden octagon with dharma wheel):
+- 7-layer radiant golden aura
+- Three teachings: Four Noble Truths, Noble Eightfold Path, Samadhi and Vipassana
+- 20-second reflection timer per teaching — time to absorb full dharma paragraphs
+- Win condition triggers after final Buddha dialogue
+
+Victory message: "Welcome to the Triple Gem. You have found refuge in the Buddha (the teacher), the Dhamma (the teaching), and the Sangha (the community). You have left the cruel world of suffering behind. The right path to Nibbana awaits."
+
+Both NPCs are significantly larger than regular NPCs (40px) — impossible to miss.

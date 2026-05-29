@@ -1,0 +1,16 @@
+Here are the five new modules for the game systems upgrade.
+
+1. save_system.py — Save/Load with 3 slots
+Autosaves every 2 minutes and on quit. Each slot stores: player position, realm, all three stats (merit, karma, wisdom), every NPC's dialogue progress and state, achievements unlocked, and total play time. Load menu shows realm, stats, and play time per slot. Manual save via pause menu (Esc → Save).
+
+2. audio.py — Procedural audio, no external files
+Generates all 19 sounds in code using Python's math and array modules. No numpy required. Per-realm ambient drones that crossfade on transition. Distinct chimes for merit, karma, and wisdom gains. Obstacle hit and destroy effects. Sacred bell for achievements. Clarity shimmer. Terminal prints [Audio] Mixer ready: (44100, -16, 2) on success. Press P to mute.
+
+3. screens.py + tutorial system — First-run tutorial and Help screen
+Tutorial fires only on the first playthrough (tracked in save). In-game Help on H key. Contextual hints appear the first time near a being or obstacle.
+
+4. glossary.py — 22 Pali terms
+Each term has: Pali spelling, pronunciation guide (e.g. "duk-kha"), English definition, and in-game context showing where the term appears. Scrollable on G key. Terms include: dukkha, tanha, nibbana, samadhi, vipassana, dhamma, sangha, karma, mudita, and more.
+
+5. progress.py — Journal and 13 achievements
+Tracks beings helped, obstacles destroyed, realms visited, clarity level. 13 achievements with bell notification. Press J to see progress, current stats, and next goal. Next goal updates dynamically: "Help 2 more beings to unlock Asura realm."

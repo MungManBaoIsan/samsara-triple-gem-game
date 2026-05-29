@@ -1,0 +1,16 @@
+Here is a complete Game Design Document for a top-down 2D Buddhist educational game.
+
+World Structure: Six realms arranged as concentric circles. The outermost ring is the Hell realm (intense suffering, anger). Moving inward: Hungry Ghost realm (craving, never satisfied), Animal realm (ignorance, instinct), Human realm (mixed experience, potential for wisdom), Asura realm (jealousy, competition), Deva realm (temporary pleasure, complacency). The Triple Gem sacred temple sits at the very centre.
+
+Three-Currency Progression:
+- Merit: earned through generosity and helping others
+- Karma: earned through right action and ethical choices
+- Wisdom: earned through understanding and insight
+
+The fog of ignorance clears as Wisdom increases. At low wisdom the world is dusty and obscured. At high wisdom the path to the Triple Gem becomes visible.
+
+Visual Style: Top-down 2D, implemented in Pygame. The six realms are visually distinct zones. NPCs are visible on the map. The player sees the world from above and navigates inward.
+
+Gameplay: Hybrid of exploration and dialogue. Player moves through the world, encounters NPCs with suffering stories, makes choices that reflect Buddhist ethics, and progresses toward the Triple Gem when Merit, Karma, and Wisdom reach required thresholds.
+
+Educational purpose: Teach Buddhist concepts of dukkha, karma, wisdom, and the Triple Gem (Buddha, Dhamma, Sangha) as the ultimate refuge. Appropriate for children, teenagers, and adults.

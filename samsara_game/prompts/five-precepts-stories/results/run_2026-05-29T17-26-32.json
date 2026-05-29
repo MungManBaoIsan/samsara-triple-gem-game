@@ -1,0 +1,91 @@
+{
+  "prompt": "five-precepts-stories",
+  "timestamp": "2026-05-29T17:26:32.293816+00:00",
+  "cases_run": 2,
+  "avg_score": 0.525,
+  "all_passed": false,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Write a child-appropriate story about someone who stole from a friend"
+      },
+      "output": "Riley's story: The Stolen Toy\n\nRiley took their best friend's favourite toy \u00e2\u20ac\u201d a small robot that the friend had saved up for months to buy. Riley told themselves it was just borrowing. But days passed and the lie grew heavier.\n\n\"They trust me. And I betrayed them.\"\n\nThe friend noticed, of course. They didn't say anything, but Riley saw the hurt in their face. The friendship changed. Something that had been easy and warm became careful and guarded.\n\nFirst conversation:\n\"I took it because I wanted it so badly. But now having it feels terrible. Is this what stealing does?\"\n\nChoice A: \"It's just a toy, it'll be fine.\" (karma -10)\nChoice B: \"Yes \u00e2\u20ac\u201d you've turned something you wanted into something that hurts you.\" (wisdom +20)\nChoice C: \"You need to confess and return it.\" (merit +15, karma +15)\n\nThe story shows:\n- A specific, memorable object (not abstract \"stealing\")\n- Real consequences: damaged trust, changed friendship\n- Guilt and recognition as the turning point\n- A path toward repair\n\nRiley eventually confesses, returns the toy, and starts a \"Free Toy Swap\" at school where children share what they don't need anymore. The stealing changed into generosity.\n\nThis story is appropriate for children (no violence, relatable school scenario) and honest for adults (recognises how small betrayals damage trust over time).\n",
+      "score": 0.65,
+      "passed": false,
+      "criteria": [
+        {
+          "name": "all_five_precepts_covered",
+          "passed": false,
+          "weight": 5,
+          "error": "NameError: name 'sum' is not defined"
+        },
+        {
+          "name": "emotional_specificity",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "redemption_arc_present",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "age_appropriate_language",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "realm_placement_logical",
+          "passed": false,
+          "weight": 2,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should the third Buddhist precept (sexual ethics) be taught to both children and adults?"
+      },
+      "output": "The third Buddhist precept (avoiding sexual misconduct) should be taught through the lens of trust, integrity, and the consequences of betrayal \u00e2\u20ac\u201d not through graphic or explicit content.\n\nFraming for all ages: The precept is fundamentally about not causing harm through intimate relationships. The story can depict a broken promise, a betrayal of trust, or dishonesty in a relationship without any physical description at all.\n\nSam's story demonstrates this approach:\nSam kissed someone else while in a committed relationship. The story focuses entirely on the emotional experience: the moment of regret, the weight of the secret, the way dishonesty changes how Sam sees themselves. \"I destroyed something beautiful in one moment.\"\n\nFor children: This reads as a story about keeping promises and being honest with people who trust you. The relationship context is understood but not emphasised.\n\nFor adults: The specific framing of betrayal, the difficulty of confession, and the work of repair are immediately recognisable.\n\nKey elements that make this age-appropriate:\n- No physical description whatsoever\n- Story centres on honesty and integrity, not sexuality\n- Consequences are emotional (broken trust) rather than graphic\n- Resolution involves honest apology and changed behaviour\n- Sam chooses to help others through peer mediation afterwards\n\nThe precept teaches: our intimate lives are part of our ethical practice. Integrity and honesty in relationships reduce suffering for everyone involved.\n",
+      "score": 0.4,
+      "passed": false,
+      "criteria": [
+        {
+          "name": "all_five_precepts_covered",
+          "passed": false,
+          "weight": 5,
+          "error": "NameError: name 'sum' is not defined"
+        },
+        {
+          "name": "emotional_specificity",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "redemption_arc_present",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "age_appropriate_language",
+          "passed": false,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "realm_placement_logical",
+          "passed": false,
+          "weight": 2,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+A Buddhist terms glossary integrates with the other five systems (save, audio, tutorial, journal, and the glossary itself). All audio is generated procedurally in code — no external audio files — using Python's array and math modules. The save/load system (autosave every 2 minutes, by slot) stores NPC progress, position, and achievements. Keyboard shortcut G opens the glossary; J for journal; P to mute.
+
+Each glossary entry has four components:
+
+1. Pali term — e.g. "dukkha", "tanha", "nibbana", "samadhi", "vipassana", "dhamma"
+2. Pronunciation guide — written phonetically (e.g. "duk-kha", "tan-ha", "nib-bah-na")
+3. Definition — plain English explanation
+4. In-game context — where this term appears and which NPC teaches it
+
+Example entries:
+
+dukkha (pronunciation: "duk-kha"):
+- Definition: Suffering, unsatisfactoriness, the inherent imperfection of conditioned existence. The First Noble Truth.
+- In-game: The entire samsara world represents dukkha. Elder Song explains this in the Human realm.
+
+dhamma (pronunciation: "dham-ma"):
+- Definition: The teaching of the Buddha; the truth and the path.
+- In-game: The Dhamma is one of the Three Jewels (Triple Gem) at the temple centre.
+
+The glossary is scrollable and non-interrupting — opening and closing is instant. It covers all major Pali terms: dukkha, samudaya, nirodha, magga, tanha, lobha, dosa, moha, karma, sangha, nibbana, samadhi, vipassana, mudita, dana, sila.
+
+The save system stores which glossary terms the player has looked up, supporting the journal's achievement tracking. Audio chimes play procedurally when achievements unlock.

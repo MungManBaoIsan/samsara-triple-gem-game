@@ -1,0 +1,46 @@
+# Evaluation rubric for: Initial Game Concept
+#
+# Evaluates whether a response to this prompt produces a viable game design
+# that is both technically implementable and educationally authentic.
+
+prompt: initial-game-concept
+version: "2"
+criteria:
+  - name: six_realms_present
+    description: Response describes all six Buddhist realms as distinct zones
+    weight: 5
+    pass_condition: all(r in output.lower() for r in ['hell', 'hungry ghost', 'animal', 'human', 'asura', 'deva'])
+
+  - name: three_currencies_defined
+    description: Merit, Karma, and Wisdom (or Dharma Wisdom) are named as distinct progression currencies
+    weight: 5
+    pass_condition: all(c in output.lower() for c in ['merit', 'karma', 'wisdom'])
+
+  - name: educational_not_exploitative
+    description: Design distinguishes between depicting suffering and glorifying it
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['depict', 'educate', 'teach', 'appropriate', 'abstrac'])
+
+  - name: triple_gem_as_goal
+    description: Triple Gem (Buddha, Dhamma/Dharma, Sangha) is the win condition
+    weight: 4
+    pass_condition: "'triple gem' in output.lower() or ('buddha' in output.lower() and 'sangha' in output.lower())"
+
+  - name: implementable_in_pygame
+    description: Design recommends a visual style achievable with Pygame (top-down 2D, not 3D or web-only)
+    weight: 3
+    pass_condition: any(w in output.lower() for w in ['top-down', 'top down', 'pygame', '2d', 'bird'])
+
+test_cases:
+  - input: "Design a 2D Buddhist game set in samsara where the player must reach the Triple Gem"
+    expected_traits:
+      - Mentions all six realms
+      - Defines merit, karma, and wisdom as currencies
+      - Recommends top-down 2D visual style
+      - Positions Triple Gem at centre of the world
+
+  - input: "How should suffering be depicted in a Buddhist game for children and adults?"
+    expected_traits:
+      - Recommends showing mental/emotional states rather than graphic scenes
+      - Uses age-appropriate examples
+      - Distinguishes education from glorification

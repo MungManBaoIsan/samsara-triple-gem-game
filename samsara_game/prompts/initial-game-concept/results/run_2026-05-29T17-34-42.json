@@ -1,0 +1,91 @@
+{
+  "prompt": "initial-game-concept",
+  "timestamp": "2026-05-29T17:34:42.496797+00:00",
+  "cases_run": 2,
+  "avg_score": 1.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Design a 2D Buddhist game set in samsara where the player must reach the Triple Gem"
+      },
+      "output": "Here is a complete Game Design Document for a top-down 2D Buddhist educational game.\n\nWorld Structure: Six realms arranged as concentric circles. The outermost ring is the Hell realm (intense suffering, anger). Moving inward: Hungry Ghost realm (craving, never satisfied), Animal realm (ignorance, instinct), Human realm (mixed experience, potential for wisdom), Asura realm (jealousy, competition), Deva realm (temporary pleasure, complacency). The Triple Gem sacred temple sits at the very centre.\n\nThree-Currency Progression:\n- Merit: earned through generosity and helping others\n- Karma: earned through right action and ethical choices\n- Wisdom: earned through understanding and insight\n\nThe fog of ignorance clears as Wisdom increases. At low wisdom the world is dusty and obscured. At high wisdom the path to the Triple Gem becomes visible.\n\nVisual Style: Top-down 2D, implemented in Pygame. The six realms are visually distinct zones. NPCs are visible on the map. The player sees the world from above and navigates inward.\n\nGameplay: Hybrid of exploration and dialogue. Player moves through the world, encounters NPCs with suffering stories, makes choices that reflect Buddhist ethics, and progresses toward the Triple Gem when Merit, Karma, and Wisdom reach required thresholds.\n\nEducational purpose: Teach Buddhist concepts of dukkha, karma, wisdom, and the Triple Gem (Buddha, Dhamma, Sangha) as the ultimate refuge. Appropriate for children, teenagers, and adults.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "six_realms_present",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "three_currencies_defined",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "educational_not_exploitative",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "triple_gem_as_goal",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "implementable_in_pygame",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should suffering be depicted in a Buddhist game for children and adults?"
+      },
+      "output": "Suffering in the six Buddhist realms (Hell, Hungry Ghost, Animal, Human, Asura, Deva) should be depicted through emotional and mental states rather than graphic scenes. This is appropriate for a top-down 2D Pygame educational game where merit, karma, and wisdom are the three currencies of progress.\n\nApproach: Show the mental state that creates suffering, not the graphic outcome. Each realm represents a specific mental state \u00e2\u20ac\u201d Hell is hatred and rage, Hungry Ghost is craving and addiction, Animal is ignorance. Rather than depicting drug abuse as a scene, show the mind of craving: never satisfied, always wanting more.\n\nThe Triple Gem at the centre represents the ultimate refuge from suffering. Players should understand that the Buddha's teaching identifies suffering's cause and the path to its end.\n\nExamples:\n- Anger: Show how hatred poisons the person feeling it, not just those it's directed at\n- Craving/addiction: Show the cycle of temporary relief followed by stronger wanting\n- Grief: Show how clinging to what cannot last creates ongoing suffering\n\nPlayers should feel comfortable and supported throughout. Each difficult scenario should end with a path toward understanding. The game should make players feel that their struggles are seen and that wisdom is possible.\n\nThis approach is age-appropriate and educates rather than glorifies. It teaches abstraction of real experiences through the lens of Buddhist teaching. Implementing this in Pygame allows the fog/clarity visual system to show wisdom literally clearing the player's view.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "six_realms_present",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "three_currencies_defined",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "educational_not_exploitative",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "triple_gem_as_goal",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "implementable_in_pygame",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

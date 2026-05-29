@@ -1,0 +1,45 @@
+# Evaluation rubric for: Five Precepts Stories
+
+prompt: five-precepts-stories
+version: "1"
+criteria:
+  - name: all_five_precepts_covered
+    description: One NPC story addresses each of the five precepts
+    weight: 5
+    pass_condition: sum(1 for w in ['kill', 'steal', 'sexual', 'intoxic', 'speech', 'lying', 'lie', 'alcohol', 'drug'] if w in output.lower()) >= 4
+
+  - name: emotional_specificity
+    description: At least one story uses a specific, vivid detail rather than a generic moral statement
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['wings', 'butterfly', 'trust', 'could have killed', 'tangled in lies', 'crumpled', 'drove', 'confess'])
+
+  - name: redemption_arc_present
+    description: Each story includes a change in behaviour or a positive resolution, not just suffering
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['change', 'chose', 'choose', 'help', 'honest', 'sober', 'confess', 'repair', 'forgive'])
+
+  - name: age_appropriate_language
+    description: No explicit sexual content, graphic violence, or adult-only language
+    weight: 5
+    pass_condition: not any(w in output.lower() for w in ['explicit', 'graphic', 'nude', 'naked', 'gore', 'blood'])
+
+  - name: realm_placement_logical
+    description: NPCs are placed in realms that match their precept (craving realm for stealing, hell for killing etc.)
+    weight: 2
+    pass_condition: any(w in output.lower() for w in ['hungry ghost', 'hell', 'realm', 'placed', 'location'])
+
+test_cases:
+  - input: "Write a child-appropriate story about someone who stole from a friend"
+    expected_traits:
+      - Story names a specific object that was stolen
+      - Shows the impact on friendship and trust
+      - Includes a moment of guilt or recognition
+      - Ends with the character making amends
+      - No graphic or adult content
+
+  - input: "How should the third Buddhist precept (sexual ethics) be taught to both children and adults?"
+    expected_traits:
+      - Frames the story around betrayal of trust, not physical acts
+      - Emotional consequences are central
+      - Resolution involves honesty and repair
+      - Language accessible to a 10-year-old

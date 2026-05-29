@@ -1,0 +1,42 @@
+# Evaluation rubric for: Audio Debug Iteration
+
+prompt: audio-debug-iteration
+version: "3"
+criteria:
+  - name: no_numpy_dependency
+    description: The fixed audio implementation does not import numpy
+    weight: 5
+    pass_condition: "'numpy' not in output.lower() or 'no numpy' in output.lower() or 'removed numpy' in output.lower()"
+
+  - name: explicit_diagnostic_output
+    description: Audio module prints a clear success or failure message to the terminal on startup
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['[audio]', 'mixer ready', 'print(', 'diagnostic', 'failed to start'])
+
+  - name: standalone_test_script
+    description: A standalone test_audio.py script is provided that can be run independently of the game
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['test_audio', 'test audio', 'standalone', 'diagnostic script'])
+
+  - name: python_version_guidance
+    description: Response identifies the Python version incompatibility and provides a specific fix
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['3.12', 'python 3.12', 'version', 'wheel', 'py -3.12'])
+
+  - name: graceful_degradation
+    description: Game runs without audio rather than crashing when the mixer cannot initialise
+    weight: 3
+    pass_condition: any(w in output.lower() for w in ['graceful', 'degrade', 'silent', 'still runs', 'falls back', 'enabled = false'])
+
+test_cases:
+  - input: "pygame is not installed even though I ran pip install pygame"
+    expected_traits:
+      - Identifies Python version mismatch as likely cause
+      - Recommends py -3.12 instead of python
+      - Provides standalone test to confirm which Python is active
+
+  - input: "No sound in game but no error messages either"
+    expected_traits:
+      - Identifies silent exception handler as the masking cause
+      - Adds explicit print statements to audio init
+      - Recommends running test_audio.py as first diagnostic step

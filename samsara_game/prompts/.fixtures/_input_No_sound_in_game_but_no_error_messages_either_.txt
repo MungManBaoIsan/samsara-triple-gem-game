@@ -1,0 +1,22 @@
+When a game produces no error messages but also no sound, the almost certain cause is a silent exception handler swallowing the failure.
+
+Look for: except Exception: pass — this pattern catches every possible error and does nothing with it. The game continues running as if nothing went wrong, but the audio system never started.
+
+Immediate diagnostic:
+
+1. Run the standalone test script to confirm audio works at all:
+   py -3.12 test_audio.py
+   This runs independently of the game and prints a clear PASSED or FAILED result.
+
+2. Check [Audio] in the terminal when launching the game. The audio module should print:
+   [Audio] Mixer ready: (44100, -16, 2)
+   or
+   [Audio] Failed to start: <reason>
+
+   If you see nothing, the diagnostic print statements are missing.
+
+3. Check for numpy dependency. If audio.py imports numpy and numpy is not installed, the entire import fails silently. The fix is to rewrite audio using only Python's built-in math and array modules — no numpy required, and the game degrades gracefully (silent but fully playable) if the mixer still cannot initialise.
+
+The rule: never use bare except Exception: pass in any system that has external dependencies or hardware requirements. Replace with explicit error messages so you always know what failed and why.
+
+Press F1 during gameplay to print a live audio diagnostic to the terminal.

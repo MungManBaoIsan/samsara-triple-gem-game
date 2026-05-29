@@ -1,0 +1,20 @@
+The victory message when reaching the Triple Gem should reflect the Buddhist teaching of taking refuge. Both Mara (the pulsing red diamond, visually distinct at 120px) and Buddha (the golden radiant octagon at 140px with dharma wheel) must be interacted with before victory is possible. The 15-second Mara reflection and 20-second Buddha reflection timers ensure the teaching is absorbed.
+
+Recommended victory message:
+
+"Welcome to the Triple Gem.
+
+You have found refuge in the Buddha (the awakened teacher), the Dhamma (the teaching and the path), and the Sangha (the community of practice).
+
+You are leaving the cruel world of suffering behind. The cycle of samsara no longer binds you.
+
+The right path to Nibbana awaits."
+
+Key elements:
+- "Welcome" rather than "Congratulations" — arrival in refuge, not a trophy
+- Explains what the Triple Gem means (Buddha, Dhamma, Sangha)
+- References leaving samsara behind — connects to the game world
+- Ends with "Nibbana awaits" — points forward
+- Tone is warm and welcoming, not triumphant
+
+The sequence must be enforced: defeat Mara first (shadow before light), then the Buddha delivers his teachings and the win is unlocked. The message should feel like being received into refuge rather than winning a game.

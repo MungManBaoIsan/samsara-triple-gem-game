@@ -1,0 +1,91 @@
+{
+  "prompt": "five-precepts-stories",
+  "timestamp": "2026-05-29T17:34:42.480965+00:00",
+  "cases_run": 2,
+  "avg_score": 0.65,
+  "all_passed": false,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Write a child-appropriate story about someone who stole from a friend"
+      },
+      "output": "Riley's story: The Stolen Toy\n\nRiley took their best friend's favourite toy \u00e2\u20ac\u201d a small robot that the friend had saved up for months to buy. Riley told themselves it was just borrowing. But days passed and the lie grew heavier.\n\n\"They trust me. And I betrayed them.\"\n\nThe friend noticed, of course. They didn't say anything, but Riley saw the hurt in their face. The friendship changed. Something that had been easy and warm became careful and guarded.\n\nFirst conversation:\n\"I took it because I wanted it so badly. But now having it feels terrible. Is this what stealing does?\"\n\nChoice A: \"It's just a toy, it'll be fine.\" (karma -10)\nChoice B: \"Yes \u00e2\u20ac\u201d you've turned something you wanted into something that hurts you.\" (wisdom +20)\nChoice C: \"You need to confess and return it.\" (merit +15, karma +15)\n\nThe story shows:\n- A specific, memorable object (not abstract \"stealing\")\n- Real consequences: damaged trust, changed friendship\n- Guilt and recognition as the turning point\n- A path toward repair\n\nRiley eventually confesses, returns the toy, and starts a \"Free Toy Swap\" at school where children share what they don't need anymore. The stealing changed into generosity.\n\nThis story is appropriate for children (no violence, relatable school scenario) and honest for adults (recognises how small betrayals damage trust over time).\n",
+      "score": 0.65,
+      "passed": false,
+      "criteria": [
+        {
+          "name": "all_five_precepts_covered",
+          "passed": false,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "emotional_specificity",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "redemption_arc_present",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "age_appropriate_language",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "realm_placement_logical",
+          "passed": false,
+          "weight": 2,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should the third Buddhist precept (sexual ethics) be taught to both children and adults?"
+      },
+      "output": "The five Buddhist precepts \u00e2\u20ac\u201d no killing, no stealing, no sexual misconduct, no intoxicants, and no false speech (lying) \u00e2\u20ac\u201d should each be taught through emotionally honest stories appropriate for all ages.\n\nThe third precept (sexual ethics) should be framed around trust and integrity rather than explicit content.\n\nSam's story demonstrates this: Sam betrayed a partner's trust. The story focuses entirely on the emotional experience \u00e2\u20ac\u201d the weight of the secret, the way dishonesty changes how Sam sees themselves. \"I destroyed something beautiful in one moment.\"\n\nFor children: this reads as a story about keeping promises and honesty with people who trust you.\nFor adults: the broken trust and the difficulty of repair are immediately recognisable.\n\nAge-appropriate elements:\n- No graphic description whatsoever\n- Story centres on honesty and integrity\n- Consequences are emotional rather than graphic\n- Sam confesses, apologises, and chooses to help others afterwards\n- The change in behaviour models the precept in action\n\nThe same principle applies across all five precepts:\n- Killing: Jamie and the butterfly \u00e2\u20ac\u201d emotional devastation, not graphic violence\n- Stealing: Riley's stolen toy \u00e2\u20ac\u201d broken trust between friends\n- Intoxicants: Alex who almost drove drunk \u00e2\u20ac\u201d \"I could have killed someone\"\n- False speech: Taylor's web of lies \u00e2\u20ac\u201d \"I don't know what's true anymore\"\n\nEach story ends with the character choosing differently and helping others, so the game teaches through redemption rather than punishment. This approach educates rather than trivialises real struggles.\n",
+      "score": 0.65,
+      "passed": false,
+      "criteria": [
+        {
+          "name": "all_five_precepts_covered",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "emotional_specificity",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "redemption_arc_present",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "age_appropriate_language",
+          "passed": false,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "realm_placement_logical",
+          "passed": false,
+          "weight": 2,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Here is the NPC system design with multiple dialogue stages unlocked by wisdom requirements.
+
+NPCs are visible on the map as coloured shapes. Players walk up to them and press E to interact.
+
+State machine: Each NPC tracks four states — initial, helped_once, transformed, enlightened. The state determines which dialogue tree is active.
+
+Wisdom-based unlocking: Later dialogue stages have requirements. Example: Kara's second conversation requires wisdom >= 30; her third requires wisdom >= 60. Players must grow in wisdom before returning for deeper teaching.
+
+NPC types:
+- Suffering NPCs: Characters trapped in their realm's delusion (Kara in Hell, Maya in Hungry Ghost). Player helps them see clearly. These transform across conversations.
+- Teacher NPCs: Elder Song in the Human realm teaches the Four Noble Truths and Eightfold Path. Wisdom requirements gate advanced teachings.
+
+Content is stored in npcs.json so dialogue can be edited without touching code. Each NPC entry has name, realm, position, type, and a list of dialogue objects with their requirements and consequences.
+
+Both suffering and teacher types are included across the six realms.

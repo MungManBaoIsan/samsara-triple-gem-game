@@ -1,0 +1,79 @@
+{
+  "prompt": "realm-hell-mechanics",
+  "timestamp": "2026-05-29T18:39:52.997302+00:00",
+  "cases_run": 2,
+  "avg_score": 1.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Make the Hell realm dangerous with stat drain and an escape NPC"
+      },
+      "output": "Here is the Hell realm danger system implementation.\n\nStat drain: While in the Hell realm, all stats diminish at 0.1 points per second. This creates urgency \u00e2\u20ac\u201d players cannot simply stand still and plan.\n\nVoid boundary: The outer black area drains stats at 2.0 points per second \u00e2\u20ac\u201d 20 times faster. Touching the void boundary means rapid, potentially irreversible loss. This represents \"never ending torture\" \u00e2\u20ac\u201d impossible to escape once stats reach zero.\n\nProgressive realm requirements:\n- Hungry Ghost realm: Wisdom 5, Merit 5, Karma 5 (easy escape from Hell)\n- Animal realm: Wisdom 20, Merit 15, Karma 15\n- Human realm: Wisdom 50, Merit 35, Karma 30\n- Asura realm: Wisdom 90, Merit 65, Karma 55\n- Deva realm: Wisdom 140, Merit 100, Karma 85\n- Temple: Wisdom 200, Merit 150, Karma 120\n\nAsh NPC: positioned at the edge of Hell near the void boundary (X: 3050, Y: 1600). He is the only NPC in Hell with zero requirements on his first dialogue \u00e2\u20ac\u201d the only escape when stats are near zero. Player must run toward danger to find their only lifeline.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "hell_drain_implemented",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "void_rapid_drain",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "progressive_requirements",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "ash_escape_mechanic",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should realm entry requirements scale across six realms?"
+      },
+      "output": "Realm entry requirements should scale progressively harder as the player moves toward the Triple Gem. Stats diminish while in the Hell realm (drain rate: -0.1/sec). The outer void boundary drains even faster. Ash is the only NPC with zero requirements \u00e2\u20ac\u201d positioned at the edge near the void as the only escape path.\n\nProgressive realm thresholds:\n\nOuter realms (easy requirements):\n- Hungry Ghost: Wisdom 5, Merit 5, Karma 5 \u00e2\u20ac\u201d almost no barrier, just escape Hell\n- Animal: Wisdom 20, Merit 15, Karma 15 \u00e2\u20ac\u201d requires a few good choices\n\nMiddle realms (moderate requirements):\n- Human: Wisdom 50, Merit 35, Karma 30 \u00e2\u20ac\u201d requires meaningful progress\n- Asura: Wisdom 90, Merit 65, Karma 55 \u00e2\u20ac\u201d requires helping multiple NPCs\n\nInner realms (hard requirements):\n- Deva: Wisdom 140, Merit 100, Karma 85 \u00e2\u20ac\u201d near-complete ethical development\n- Temple: Wisdom 200, Merit 150, Karma 120 \u00e2\u20ac\u201d enlightenment threshold\n\nEach barrier increases significantly from the previous. When a player hits a barrier they see exactly what stats they need, so they know to find more NPCs rather than wandering confused.\n\nThe difficulty increases scale roughly proportionally, so no single realm feels like an impossible jump. The progression mirrors the Buddhist teaching that the path becomes more demanding as wisdom deepens.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "hell_drain_implemented",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "void_rapid_drain",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "progressive_requirements",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "ash_escape_mechanic",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

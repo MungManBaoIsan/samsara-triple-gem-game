@@ -1,0 +1,29 @@
+{
+  "prompt": "mara-buddha-finale",
+  "timestamp": "2026-05-29T17:24:45.989358+00:00",
+  "cases_run": 2,
+  "avg_score": 0.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Add a final boss Mara and a Buddha teacher NPC with enforced sequence"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "What should the victory message say when the player reaches the Triple Gem?"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "prompt": "five-systems-upgrade",
+  "timestamp": "2026-05-29T17:24:45.972742+00:00",
+  "cases_run": 2,
+  "avg_score": 0.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Add save/load, audio, tutorial, glossary, and journal systems to a Pygame game"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should a Buddhist terms glossary be structured in an educational game?"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Suffering in the six Buddhist realms (Hell, Hungry Ghost, Animal, Human, Asura, Deva) should be depicted through emotional and mental states rather than graphic scenes. This is appropriate for a top-down 2D Pygame educational game where merit, karma, and wisdom are the three currencies of progress.
+
+Approach: Show the mental state that creates suffering, not the graphic outcome. Each realm represents a specific mental state — Hell is hatred and rage, Hungry Ghost is craving and addiction, Animal is ignorance. Rather than depicting drug abuse as a scene, show the mind of craving: never satisfied, always wanting more.
+
+The Triple Gem at the centre represents the ultimate refuge from suffering. Players should understand that the Buddha's teaching identifies suffering's cause and the path to its end.
+
+Examples:
+- Anger: Show how hatred poisons the person feeling it, not just those it's directed at
+- Craving/addiction: Show the cycle of temporary relief followed by stronger wanting
+- Grief: Show how clinging to what cannot last creates ongoing suffering
+
+Players should feel comfortable and supported throughout. Each difficult scenario should end with a path toward understanding. The game should make players feel that their struggles are seen and that wisdom is possible.
+
+This approach is age-appropriate and educates rather than glorifies. It teaches abstraction of real experiences through the lens of Buddhist teaching. Implementing this in Pygame allows the fog/clarity visual system to show wisdom literally clearing the player's view.

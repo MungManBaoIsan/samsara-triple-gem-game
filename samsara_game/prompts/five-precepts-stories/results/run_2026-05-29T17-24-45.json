@@ -1,0 +1,29 @@
+{
+  "prompt": "five-precepts-stories",
+  "timestamp": "2026-05-29T17:24:45.971043+00:00",
+  "cases_run": 2,
+  "avg_score": 0.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Write a child-appropriate story about someone who stole from a friend"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should the third Buddhist precept (sexual ethics) be taught to both children and adults?"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    }
+  ]
+}

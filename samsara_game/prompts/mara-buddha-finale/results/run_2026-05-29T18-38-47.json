@@ -1,0 +1,91 @@
+{
+  "prompt": "mara-buddha-finale",
+  "timestamp": "2026-05-29T18:38:47.649001+00:00",
+  "cases_run": 2,
+  "avg_score": 1.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Add a final boss Mara and a Buddha teacher NPC with enforced sequence"
+      },
+      "output": "Here is the Mara and Buddha finale system with enforced sequence.\n\nSequence enforcement: Buddha's interaction handler checks Mara's dialogue state before allowing conversation. If Mara is not in \"enlightened\" state, approaching Buddha shows \"Defeat Mara First\" indicator. The interaction is blocked. This is required \u00e2\u20ac\u201d no shortcuts.\n\nMara (120px pulsing red diamond):\n- 5-layer dark aura radiating outward\n- Three dialogue challenges testing doubt, guilt, and pride\n- Wrong choices lose stats; wise choices gain wisdom\n- 15-second reflection timer per dialogue\n- Must complete all three before Mara dissolves\n\nBuddha (140px golden octagon with dharma wheel):\n- 7-layer radiant golden aura\n- Three teachings: Four Noble Truths, Noble Eightfold Path, Samadhi and Vipassana\n- 20-second reflection timer per teaching \u00e2\u20ac\u201d time to absorb full dharma paragraphs\n- Win condition triggers after final Buddha dialogue\n\nVictory message: \"Welcome to the Triple Gem. You have found refuge in the Buddha (the teacher), the Dhamma (the teaching), and the Sangha (the community). You have left the cruel world of suffering behind. The right path to Nibbana awaits.\"\n\nBoth NPCs are significantly larger than regular NPCs (40px) \u00e2\u20ac\u201d impossible to miss.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "enforced_sequence",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "mara_visually_distinct",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "buddha_visually_distinct",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "reflection_timers",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        },
+        {
+          "name": "authentic_teachings",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        }
+      ]
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "What should the victory message say when the player reaches the Triple Gem?"
+      },
+      "output": "The victory message when reaching the Triple Gem should reflect the Buddhist teaching of taking refuge. Both Mara (the pulsing red diamond, visually distinct at 120px) and Buddha (the golden radiant octagon at 140px with dharma wheel) must be interacted with before victory is possible. The 15-second Mara reflection and 20-second Buddha reflection timers ensure the teaching is absorbed.\n\nRecommended victory message:\n\n\"Welcome to the Triple Gem.\n\nYou have found refuge in the Buddha (the awakened teacher), the Dhamma (the teaching and the path), and the Sangha (the community of practice).\n\nYou are leaving the cruel world of suffering behind. The cycle of samsara no longer binds you.\n\nThe right path to Nibbana awaits.\"\n\nKey elements:\n- \"Welcome\" rather than \"Congratulations\" \u00e2\u20ac\u201d arrival in refuge, not a trophy\n- Explains what the Triple Gem means (Buddha, Dhamma, Sangha)\n- References leaving samsara behind \u00e2\u20ac\u201d connects to the game world\n- Ends with \"Nibbana awaits\" \u00e2\u20ac\u201d points forward\n- Tone is warm and welcoming, not triumphant\n\nThe sequence must be enforced: defeat Mara first (shadow before light), then the Buddha delivers his teachings and the win is unlocked. The message should feel like being received into refuge rather than winning a game.\n",
+      "score": 1.0,
+      "passed": true,
+      "criteria": [
+        {
+          "name": "enforced_sequence",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        },
+        {
+          "name": "mara_visually_distinct",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "buddha_visually_distinct",
+          "passed": true,
+          "weight": 4,
+          "error": null
+        },
+        {
+          "name": "reflection_timers",
+          "passed": true,
+          "weight": 3,
+          "error": null
+        },
+        {
+          "name": "authentic_teachings",
+          "passed": true,
+          "weight": 5,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "prompt": "npc-system-design",
+  "timestamp": "2026-05-29T17:25:30.742529+00:00",
+  "cases_run": 2,
+  "avg_score": 0.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Add NPCs with multiple conversations that unlock as player wisdom grows"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should NPC dialogue change based on player choices and stats?"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    }
+  ]
+}

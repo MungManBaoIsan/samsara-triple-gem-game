@@ -1,0 +1,29 @@
+{
+  "prompt": "initial-game-concept",
+  "timestamp": "2026-05-29T17:25:30.728669+00:00",
+  "cases_run": 2,
+  "avg_score": 0.0,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "inputs": {
+        "input": "Design a 2D Buddhist game set in samsara where the player must reach the Triple Gem"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    },
+    {
+      "case_index": 1,
+      "inputs": {
+        "input": "How should suffering be depicted in a Buddhist game for children and adults?"
+      },
+      "output": "",
+      "score": null,
+      "passed": null,
+      "criteria": []
+    }
+  ]
+}

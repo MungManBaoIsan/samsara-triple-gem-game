@@ -1,0 +1,45 @@
+# Evaluation rubric for: Five Systems Upgrade
+
+prompt: five-systems-upgrade
+version: "1"
+criteria:
+  - name: all_five_modules_present
+    description: Response produces five distinct new modules or clearly named system classes
+    weight: 5
+    pass_condition: sum(1 for w in ['save', 'audio', 'glossary', 'journal', 'tutorial', 'progress', 'achievement'] if w in output.lower()) >= 4
+
+  - name: no_external_audio_files
+    description: Audio system generates sounds in code, not by loading external .mp3/.wav files
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['procedural', 'generated', 'generate', 'math.sin', 'array', 'pure python', 'no external', 'in code'])
+
+  - name: save_system_complete
+    description: Save/load system covers stats, NPC state, position, and achievements — not just stats
+    weight: 4
+    pass_condition: all(w in output.lower() for w in ['save', 'load']) and any(w in output.lower() for w in ['npc', 'progress', 'position', 'slot', 'autosave'])
+
+  - name: pali_terms_glossary
+    description: Glossary includes Pali pronunciation and in-game context, not just English definitions
+    weight: 3
+    pass_condition: any(w in output.lower() for w in ['pali', 'pronunciation', 'dukkha', 'tanha', 'nibbana', 'samadhi', 'vipassana', 'dhamma'])
+
+  - name: keyboard_shortcuts_documented
+    description: Each new system is accessible via a keyboard shortcut
+    weight: 2
+    pass_condition: sum(1 for w in [' j ', ' g ', ' h ', ' p ', ' m '] if w in output.lower()) >= 3
+
+test_cases:
+  - input: "Add save/load, audio, tutorial, glossary, and journal systems to a Pygame game"
+    expected_traits:
+      - Five distinct modules or classes
+      - Audio uses procedural generation (no file paths)
+      - Save includes NPC dialogue state
+      - Glossary has Pali terms with pronunciation
+      - All systems accessible via keyboard
+
+  - input: "How should a Buddhist terms glossary be structured in an educational game?"
+    expected_traits:
+      - Each term has Pali spelling and pronunciation guide
+      - Definition explains real-world meaning
+      - In-game context shows where the term appears
+      - Scrollable interface accessible anywhere

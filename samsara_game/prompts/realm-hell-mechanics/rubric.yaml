@@ -1,0 +1,38 @@
+# Evaluation rubric for: Realm Hell Mechanics
+
+prompt: realm-hell-mechanics
+version: "1"
+criteria:
+  - name: hell_drain_implemented
+    description: Stats decrease over time while player is in the Hell realm
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['drain', 'diminish', 'decrease', 'lose', 'suffer'])
+
+  - name: void_rapid_drain
+    description: The outer black void area has a faster, more severe drain rate than the Hell realm itself
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['void', 'rapid', 'fast', 'severe', 'boundary', 'torture', 'impossible'])
+
+  - name: progressive_requirements
+    description: Each realm requires higher stats than the previous, scaling toward the Triple Gem
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['progressive', 'requirement', 'increases', 'harder', 'scale', 'threshold'])
+
+  - name: ash_escape_mechanic
+    description: A specific NPC (Ash) is positioned at the Hell edge as the only zero-requirement escape path
+    weight: 4
+    pass_condition: "'ash' in output.lower() and any(w in output.lower() for w in ['edge', 'only', 'escape', 'boundary', 'void'])"
+
+test_cases:
+  - input: "Make the Hell realm dangerous with stat drain and an escape NPC"
+    expected_traits:
+      - Slow drain throughout Hell realm
+      - Much faster drain at void boundary
+      - Ash NPC with zero requirements positioned near void
+      - Progressive realm barriers scaling toward Temple
+
+  - input: "How should realm entry requirements scale across six realms?"
+    expected_traits:
+      - Easy requirements for outer realms (Hungry Ghost, Animal)
+      - Hard requirements for inner realms (Asura, Deva)
+      - Very high requirements for Temple (200/150/120 or similar)

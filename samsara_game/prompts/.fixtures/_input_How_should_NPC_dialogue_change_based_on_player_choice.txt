@@ -1,0 +1,13 @@
+NPC dialogue should change based on three factors: player wisdom level, previous choices made with that NPC, and the number of times the NPC has been visited.
+
+NPCs are visible on the map as coloured shapes. Players walk up to them and press E to interact. All dialogue content is stored in npcs.json — a data file that can be edited without touching code.
+
+Wisdom threshold requirements gate dialogue stages. A character won't share deep teachings until the player has demonstrated enough understanding. State tracking remembers whether the player chose compassionately or dismissively in previous conversations.
+
+Both types of NPCs benefit from this system:
+- Suffering NPCs: their transformation arc only progresses when the player makes wise, compassionate responses. Wrong choices result in the NPC staying stuck in their realm's delusion.
+- Teacher NPCs (guides): only reveal deeper wisdom when the player shows they're ready. Requirements gate access to advanced teachings.
+
+The multiple dialogue stages unlock progressively: initial state, helped_once, transformed, enlightened. This mirrors the Buddhist teaching that wisdom develops through repeated practice, not a single encounter.
+
+The system handles both suffering characters who need help and teacher characters who offer wisdom — ensuring variety across the six realms.

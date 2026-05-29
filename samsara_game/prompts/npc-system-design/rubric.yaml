@@ -1,0 +1,43 @@
+# Evaluation rubric for: NPC System Design
+
+prompt: npc-system-design
+version: "1"
+criteria:
+  - name: npcs_visible_on_map
+    description: NPCs are rendered as visible objects the player can see while exploring
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['visible', 'rendered', 'draw', 'sprite', 'on the map', 'on map'])
+
+  - name: multiple_dialogue_stages
+    description: NPCs have more than one conversation state that unlocks progressively
+    weight: 5
+    pass_condition: any(w in output.lower() for w in ['multiple dialogue', 'progressive', 'unlock', 'stages', 'state', 'helped_once', 'transformed'])
+
+  - name: stat_based_unlocking
+    description: Dialogue options change based on player wisdom, merit, or karma values
+    weight: 4
+    pass_condition: any(w in output.lower() for w in ['wisdom', 'requirement', 'unlock', 'threshold', 'based on'])
+
+  - name: both_npc_types
+    description: Design includes both suffering NPCs (need help) and teacher NPCs (give wisdom)
+    weight: 3
+    pass_condition: any(w in output.lower() for w in ['suffering', 'teacher', 'both', 'types', 'guides'])
+
+  - name: json_driven_content
+    description: NPC dialogue is stored in an editable data file rather than hardcoded
+    weight: 3
+    pass_condition: any(w in output.lower() for w in ['json', 'content file', 'data file', 'editable', 'npcs.json'])
+
+test_cases:
+  - input: "Add NPCs with multiple conversations that unlock as player wisdom grows"
+    expected_traits:
+      - Visible character sprites or representations on the map
+      - State machine tracking initial/helped/transformed/enlightened stages
+      - Wisdom threshold requirements on later dialogues
+      - JSON content file for easy editing
+
+  - input: "How should NPC dialogue change based on player choices and stats?"
+    expected_traits:
+      - Stat requirements gate later conversations
+      - Previous choices affect follow-up dialogue
+      - Both helper and helpee roles represented

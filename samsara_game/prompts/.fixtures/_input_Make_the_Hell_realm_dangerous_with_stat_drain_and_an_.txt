@@ -1,0 +1,15 @@
+Here is the Hell realm danger system implementation.
+
+Stat drain: While in the Hell realm, all stats diminish at 0.1 points per second. This creates urgency — players cannot simply stand still and plan.
+
+Void boundary: The outer black area drains stats at 2.0 points per second — 20 times faster. Touching the void boundary means rapid, potentially irreversible loss. This represents "never ending torture" — impossible to escape once stats reach zero.
+
+Progressive realm requirements:
+- Hungry Ghost realm: Wisdom 5, Merit 5, Karma 5 (easy escape from Hell)
+- Animal realm: Wisdom 20, Merit 15, Karma 15
+- Human realm: Wisdom 50, Merit 35, Karma 30
+- Asura realm: Wisdom 90, Merit 65, Karma 55
+- Deva realm: Wisdom 140, Merit 100, Karma 85
+- Temple: Wisdom 200, Merit 150, Karma 120
+
+Ash NPC: positioned at the edge of Hell near the void boundary (X: 3050, Y: 1600). He is the only NPC in Hell with zero requirements on his first dialogue — the only escape when stats are near zero. Player must run toward danger to find their only lifeline.

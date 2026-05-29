@@ -1,0 +1,19 @@
+Realm entry requirements should scale progressively harder as the player moves toward the Triple Gem. Stats diminish while in the Hell realm (drain rate: -0.1/sec). The outer void boundary drains even faster. Ash is the only NPC with zero requirements — positioned at the edge near the void as the only escape path.
+
+Progressive realm thresholds:
+
+Outer realms (easy requirements):
+- Hungry Ghost: Wisdom 5, Merit 5, Karma 5 — almost no barrier, just escape Hell
+- Animal: Wisdom 20, Merit 15, Karma 15 — requires a few good choices
+
+Middle realms (moderate requirements):
+- Human: Wisdom 50, Merit 35, Karma 30 — requires meaningful progress
+- Asura: Wisdom 90, Merit 65, Karma 55 — requires helping multiple NPCs
+
+Inner realms (hard requirements):
+- Deva: Wisdom 140, Merit 100, Karma 85 — near-complete ethical development
+- Temple: Wisdom 200, Merit 150, Karma 120 — enlightenment threshold
+
+Each barrier increases significantly from the previous. When a player hits a barrier they see exactly what stats they need, so they know to find more NPCs rather than wandering confused.
+
+The difficulty increases scale roughly proportionally, so no single realm feels like an impossible jump. The progression mirrors the Buddhist teaching that the path becomes more demanding as wisdom deepens.
