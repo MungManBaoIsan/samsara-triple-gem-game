@@ -3,62 +3,42 @@
   HOW TO PLAY ON WINDOWS
 ====================================================
 
-STEP 1 - Install Python 3.12
-------------------------------
-1. Go to: https://www.python.org/downloads/release/python-3128/
-2. Scroll down to "Files"
-3. Download: Windows installer (64-bit)
-   (the file called python-3.12.8-amd64.exe)
-4. Run the installer
-   IMPORTANT: tick "Add Python to PATH" before clicking Install
+GETTING STARTED
+----------------
+1. Unzip the downloaded file
+2. Open the Samsara folder
+3. Double-click Samsara.exe to launch the game
 
-
-STEP 2 - Install pygame
-------------------------
-1. Open Command Prompt
-   (press Windows key, type "cmd", press Enter)
-2. Type this and press Enter:
-
-   py -3.12 -m pip install pygame
-
-
-STEP 3 - Run the game
-----------------------
-1. In Command Prompt, navigate to this folder.
-   For example if it's on your Desktop:
-
-   cd %USERPROFILE%\Desktop\samsara_game
-
-   (adjust the path to wherever you put the folder)
-
-2. Run the game:
-
-   py -3.12 main.py
+That's it — no Python, no installation, nothing else required.
 
 
 CONTROLS
 ---------
-  Move          : WASD or Arrow Keys
-  Talk to NPC   : E
-  Strike obstacle: X
-  Meditate      : M
-  Journal       : J
-  Glossary      : G
-  Help          : H
-  Mute sound    : P
-  Pause / Save  : ESC
+  Move            : WASD or Arrow Keys
+  Talk to NPC     : E
+  Strike obstacle : X
+  Meditate        : M
+  Journal         : J
+  Glossary        : G
+  Help            : H
+  Mute sound      : P
+  Pause / Save    : ESC
 
 
 TROUBLESHOOTING
 ----------------
-"py is not recognized"
-  -> Reinstall Python 3.12 and tick "Add Python to PATH"
+"Windows protected your PC" warning on first launch?
+  -> Click "More info" then "Run anyway"
+  -> This appears because the game is not signed by Microsoft.
+  -> It is safe to run.
 
-"No module named pygame"
-  -> Run:  py -3.12 -m pip install pygame  and try again
+Game won't open at all?
+  -> Make sure you unzipped the folder first before running Samsara.exe
+  -> Running the .exe directly from inside the zip will not work
 
-Game has no sound?
-  -> Run:  py -3.12 test_audio.py  for a diagnosis
+No sound?
+  -> Check your system volume is not muted
+  -> Try pressing P in-game to toggle sound on/off
 
 ====================================================
   Enjoy your journey to the Triple Gem!
