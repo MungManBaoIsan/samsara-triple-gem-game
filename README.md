@@ -33,9 +33,9 @@ Go to https://mungmanbaoisan.itch.io/samsara-triple-gem-game and click **Play in
 
 ## My Journey
 
-**2026-05-29 — Added browser play; fixed lag and visual bugs**
-Made the game playable in the browser using Pygbag (WebAssembly). Fixed audio blocking the loader, a browser security header preventing Python from loading, per-frame surface creation causing severe lag, and a font rendering bug that showed capital I instead of lowercase i. Restored all visual effects (fog, NPC auras, world atmosphere) using surface caching so performance stayed smooth.
-Key lesson: browser environments are strict about audio and cross-origin security in ways desktop never is. Diagnose from the console, fix one blocker at a time.
+**2026-05-29 — Getting Samsara into the browser: two rounds of fixes**
+Ported the game to Itch.io using Pygbag (WebAssembly). Round 1 was getting it to load at all — fixed audio blocking the loader, a browser security header blocking the CDN, a font rendering bug, and an NPC dialogue layout issue. Round 2 was making it smooth — found and removed 70+ transparent surfaces being allocated every frame across six files, bumped all font sizes, and fixed a broken pause screen.
+Key lessons: browser environments are strict in ways desktop never is — diagnose from the console, fix one blocker at a time. In WebAssembly, never allocate inside the draw loop.
 
 ## What's Next
 
