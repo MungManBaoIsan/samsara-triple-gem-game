@@ -4,6 +4,8 @@ A top-down 2D Buddhist RPG where every moral choice shapes your soul. Navigate s
 
 🎮 **Play in browser:** https://mungmanbaoisan.itch.io/samsara-triple-gem-game
 
+![Samsara gameplay — facing Mara at the temple gates](screenshot.png)
+
 ## What It Does
 
 - Explore six Buddhist realms — Hell, Hungry Ghost, Animal, Human, Asura, Deva — as concentric circles on a world map
