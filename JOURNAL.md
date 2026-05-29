@@ -65,6 +65,8 @@ Built with Claude Code — two sessions covering Pygbag setup, browser debugging
 
 ## 2026-05-29 — Shipped Samsara to Itch.io and Archived the Prompt Engineering Behind It
 
+**TL;DR:** Shipped *Samsara* — a 2D Buddhist educational Pygame game with 14 NPCs, six realm zones, and a mandatory Mara→Buddha finale — to Itch.io, then used `prompt-archivist` to turn the session's 7 key prompts into a version-controlled `/prompts` folder with reasoning docs, executable rubrics, and a CI workflow, all passing at 100%.
+
 **Type:** Milestone
 
 **What I built or did**
@@ -79,19 +81,11 @@ Started with a single concept prompt in November 2025 describing samsara as a wo
 
 `except Exception: pass` is the first place to look when something fails silently — it hid three separate audio bugs in sequence. And documenting *why* you wrote a prompt (not just what it says) is what turns AI-assisted work into real portfolio evidence.
 
+**Skills used:** `prompt-archivist`, `portfolio-update`, `itch-deploy`
+
 **References / Conversations**
 
 Built with Claude Code (claude-sonnet-4-6). Game: [mungmanbaoisan.itch.io/samsara-triple-gem-game](https://mungmanbaoisan.itch.io/samsara-triple-gem-game). Repo: [github.com/MungManBaoIsan/samsara-triple-gem-game](https://github.com/MungManBaoIsan/samsara-triple-gem-game).
-
----
-
-## 2026-05-29 — Shipped Samsara Game and Documented the Prompt Engineering
-
-*Portfolio milestone summary — the headline version of the entry above.*
-
-Built and shipped *Samsara: Journey to the Triple Gem* — a 2D Buddhist educational Pygame game with 14 NPCs, six realm zones, and a mandatory Mara→Buddha finale — to [Itch.io](https://mungmanbaoisan.itch.io/samsara-triple-gem-game). Then used `prompt-archivist` to turn the session's 7 key prompts into a version-controlled `/prompts` folder with reasoning docs, executable rubrics, and a CI workflow — all passing at 100%. Key lesson: silent error handling (`except Exception: pass`) will mask bugs indefinitely — add diagnostic output early.
-
-**Skills used:** `prompt-archivist`, `portfolio-update`, `itch-deploy`
 
 ---
 
