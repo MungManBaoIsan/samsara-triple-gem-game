@@ -3,6 +3,28 @@ A chronological log of key developments, decisions and learnings throughout this
 
 ---
 
+## 2026-05-29 — Shipped Samsara to Itch.io and Archived the Prompt Engineering Behind It
+
+**Type:** Milestone
+
+**What I built or did**
+
+Shipped *Samsara: Journey to the Triple Gem* — a complete 2D Buddhist educational game built entirely with AI assistance — to [mungmanbaoisan.itch.io/samsara-triple-gem-game](https://mungmanbaoisan.itch.io/samsara-triple-gem-game). Then used the `prompt-archivist` skill to document the 7 key prompts behind the build, each with a verbatim quote, reasoning doc, version history, executable rubric, and test fixtures. All 7 pass a GitHub Actions CI workflow at 100%.
+
+**How We Did It**
+
+Started with a single concept prompt in November 2025 describing samsara as a world of suffering with the Triple Gem at the centre. Built the game iteratively over many sessions: six realms as concentric circles, three-currency progression (Merit, Karma, Wisdom), 14 NPCs with transformation arcs, a hell drain mechanic, the Mara→Buddha mandatory finale, five-precepts stories, and a five-system upgrade (save/load, audio, tutorial, glossary, journal). Fixed a multi-layer audio bug — silent exception handlers masked a numpy dependency masking a Python version mismatch. Shipped a Windows executable via PyInstaller to Itch.io. Then ran `prompt-archivist`: interviewed myself about each prompt's reasoning, got approval on each REASONING.md before writing anything to disk, generated rubrics with executable pass conditions, created deterministic fixtures, and wired everything into CI.
+
+**What I learned**
+
+`except Exception: pass` is the first place to look when something fails silently — it hid three separate audio bugs in sequence. And documenting *why* you wrote a prompt (not just what it says) is what turns AI-assisted work into real portfolio evidence.
+
+**References / Conversations**
+
+Built with Claude Code (claude-sonnet-4-6). Game: [mungmanbaoisan.itch.io/samsara-triple-gem-game](https://mungmanbaoisan.itch.io/samsara-triple-gem-game). Repo: [github.com/MungManBaoIsan/samsara-triple-gem-game](https://github.com/MungManBaoIsan/samsara-triple-gem-game).
+
+---
+
 ## 2026-05-29 — Getting Samsara into the browser: the full story
 
 **TL;DR:**
