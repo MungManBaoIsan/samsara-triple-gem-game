@@ -1,0 +1,1411 @@
+{
+  "tormented_soul": {
+    "name": "Ash",
+    "title": "The Tormented Soul",
+    "realm": "hell",
+    "x": 3050,
+    "y": 1600,
+    "color": [
+      200,
+      50,
+      50
+    ],
+    "description": "A lost soul consumed by guilt and regret, wandering at the edge of the void.",
+    "type": "suffering",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "A figure sits hunched in the darkness, head in hands. As you approach, they look up with hollow, tear-stained eyes.\n\n\"I... I can't stop thinking about it. The things I said. The hurt I caused. They haunt me every moment. I deserve this pain. I deserve this hell.\"\n\nTheir voice cracks with despair. What do you say?",
+        "choices": [
+          {
+            "text": "Yes, you do deserve to suffer for what you did.",
+            "consequences": {
+              "merit": 0,
+              "karma": -15,
+              "wisdom": 0,
+              "message": "Ash's eyes fill with fresh tears. \"You're right... I'm worthless.\" The guilt deepens. You've added to their suffering.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "Everyone makes mistakes. What matters is learning from them.",
+            "consequences": {
+              "merit": 20,
+              "karma": 25,
+              "wisdom": 30,
+              "message": "Ash looks up, a tiny spark of hope flickering. \"Learning? You think... I could change?\" The first step toward healing.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "The past cannot be changed, but this moment - right now - you can choose differently.",
+            "consequences": {
+              "merit": 30,
+              "karma": 35,
+              "wisdom": 45,
+              "message": "Ash takes a shuddering breath. \"Right now... I can choose differently...\" A profound realization dawns. The chains of guilt begin to loosen.",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 15,
+          "interaction_count": 1
+        },
+        "text": "Ash stands a bit straighter now, though guilt still weighs heavily.\n\n\"I understand that I can learn, but... how do I forgive myself? Every time I try to move forward, the memories flood back. The faces of those I hurt. How do I live with what I've done?\"",
+        "choices": [
+          {
+            "text": "You can't forgive yourself. Just accept the guilt.",
+            "consequences": {
+              "merit": 0,
+              "karma": -10,
+              "wisdom": 0,
+              "message": "Ash slumps back into despair. The progress fades. Guilt hardens into a permanent prison.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Forgiveness means making amends and not repeating the harm.",
+            "consequences": {
+              "merit": 25,
+              "karma": 30,
+              "wisdom": 35,
+              "message": "Ash nods slowly. \"I can make amends... I can act differently now...\" Understanding grows.",
+              "npc_state": "transformed"
+            }
+          },
+          {
+            "text": "Self-forgiveness is seeing clearly: you were ignorant then. You are wiser now. The you who harmed was not the you who understands.",
+            "consequences": {
+              "merit": 35,
+              "karma": 40,
+              "wisdom": 50,
+              "message": "Tears stream down Ash's face - but these are tears of release. \"I was ignorant... but I'm learning...\" True compassion, even for oneself, blooms.",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 40,
+          "interaction_count": 2
+        },
+        "text": "Ash's face has transformed. The torment has lifted, replaced by quiet peace and determination.\n\n\"Thank you. You've shown me that hell is not a place - it's a state of mind. I've been my own torturer, holding myself in this prison of guilt. But now I see: I can choose to learn, to grow, to help others avoid my mistakes.\"\n\nAsh smiles - a genuine, warm smile.",
+        "choices": [
+          {
+            "text": "I'm glad I could help you see clearly.",
+            "consequences": {
+              "merit": 30,
+              "karma": 30,
+              "wisdom": 40,
+              "message": "Ash bows deeply. \"You've given me the greatest gift - freedom from my own mind. May you find the same freedom.\" They walk toward the light.",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "vengeful_warrior": {
+    "name": "Kara",
+    "title": "The Vengeful Warrior",
+    "realm": "hell",
+    "x": 2800,
+    "y": 1600,
+    "color": [
+      255,
+      100,
+      100
+    ],
+    "description": "A warrior consumed by rage, seeking revenge for past betrayals.",
+    "type": "suffering",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Kara stands before you, fists clenched, jaw tight. Her eyes burn with rage.\n\n\"They BETRAYED me! After everything I did for them! I'll make them PAY for what they did. I'll destroy them like they destroyed me!\"\n\nShe's shaking with anger. What do you say?",
+        "choices": [
+          {
+            "text": "You should destroy them! They deserve it!",
+            "consequences": {
+              "merit": -15,
+              "karma": -25,
+              "wisdom": -10,
+              "message": "Kara nods grimly. But you both remain trapped in hatred. The poison of anger spreads to you both.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "I understand your pain. Betrayal hurts deeply.",
+            "consequences": {
+              "merit": 15,
+              "karma": 15,
+              "wisdom": 25,
+              "message": "Kara pauses. For a moment, the rage cracks and you see the hurt underneath. \"It does hurt... so much...\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Hatred is like holding a hot coal. You're the one getting burned.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 35,
+              "message": "Kara stops. Really stops. Her hands unclench slowly. \"I... I am burning, aren't I? This rage is destroying ME.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 10,
+          "interaction_count": 1
+        },
+        "text": "Kara looks less tense than before. The fire in her eyes has dimmed.\n\n\"I've been thinking about what you said. The anger is like a weight I carry everywhere. But I don't know how to let it go. They hurt me! The Buddha taught about hatred - 'dosa' - as one of the Three Poisons. But doesn't that mean they were wrong and I'm right to be angry?\"",
+        "choices": [
+          {
+            "text": "Yes, you have every right to be angry!",
+            "consequences": {
+              "merit": -10,
+              "karma": -20,
+              "wisdom": -15,
+              "message": "Kara's jaw tightens again. The progress fades. \"You're right. I DO have the right.\" The anger returns.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "They were wrong. But holding anger only punishes YOU, not them.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 40,
+              "message": "Kara nods slowly. \"They probably don't even think about me anymore. But I think about them every day. I'm the prisoner here.\"",
+              "npc_state": "transformed"
+            }
+          },
+          {
+            "text": "Hurt people hurt people. Maybe they were suffering too.",
+            "consequences": {
+              "merit": 30,
+              "karma": 30,
+              "wisdom": 50,
+              "message": "Kara's eyes widen. \"I... never thought about what pain they might have been in. Could my anger be the same as theirs?\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 30,
+          "interaction_count": 2
+        },
+        "text": "Kara smiles when she sees you. There's peace in her face now.\n\n\"Friend, I wanted to thank you. I've been practicing letting go. Some days are harder than others, but... I'm free. The betrayal still happened, but it doesn't own me anymore. I hope you find your freedom too.\"",
+        "choices": [
+          {
+            "text": "I'm so glad to hear this. You've found real wisdom.",
+            "consequences": {
+              "merit": 20,
+              "karma": 20,
+              "wisdom": 30,
+              "message": "Kara bows to you. \"We helped each other. May all beings find this peace.\"",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scroll_addict": {
+    "name": "Maya",
+    "title": "The Endless Scroller",
+    "realm": "hungry_ghost",
+    "x": 2200,
+    "y": 800,
+    "color": [
+      255,
+      140,
+      0
+    ],
+    "description": "A young woman who can't stop scrolling, comparing, wanting.",
+    "type": "suffering",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Maya doesn't even look up when you approach. Her eyes are glued to her phone, thumb scrolling endlessly.\n\n\"Just... one more... post. Everyone's lives look so perfect. I need to see more. Maybe if I had what they have, I'd finally be happy. Just one more scroll...\"\n\nHer thumb keeps moving. She looks exhausted.",
+        "choices": [
+          {
+            "text": "Yeah, social media is great! Keep scrolling!",
+            "consequences": {
+              "merit": -15,
+              "karma": -20,
+              "wisdom": -10,
+              "message": "Maya nods without looking up. The craving intensifies. Both of you sink deeper into the hungry ghost realm.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "How do you feel right now, honestly?",
+            "consequences": {
+              "merit": 15,
+              "karma": 15,
+              "wisdom": 30,
+              "message": "Maya pauses for the first time. \"I feel... empty. Anxious. Like I'm missing out on life while watching everyone else live theirs.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Nothing on that screen will ever be enough. That's the nature of craving.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 40,
+              "message": "Maya's scrolling slows. \"You're right. I've been scrolling for hours and I feel worse than when I started. It's never enough.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 15,
+          "interaction_count": 1
+        },
+        "text": "Maya has put her phone down. She looks uncomfortable without it.\n\n\"I've been trying to stop scrolling. But then I feel this... emptiness. This craving - Buddha called it 'tanha.' It's so strong! What am I supposed to do with that feeling? Is something wrong with me for having this addiction?\"",
+        "choices": [
+          {
+            "text": "Just distract yourself with something else.",
+            "consequences": {
+              "merit": -5,
+              "karma": -5,
+              "wisdom": 5,
+              "message": "Maya tries other distractions, but the craving just shifts to new objects. Replacing one addiction with another doesn't address the root.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Addiction is real, whether it's scrolling or anything else. Be kind to yourself - you're breaking a powerful habit.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 35,
+              "message": "Maya's shoulders relax. \"It IS real. I'm not weak - my brain was trained to crave the dopamine hits. I can retrain it with patience and self-compassion.\"",
+              "npc_state": "transformed"
+            }
+          },
+          {
+            "text": "Feel the craving fully. Don't try to fill it or run from it. Just observe it with mindfulness.",
+            "consequences": {
+              "merit": 30,
+              "karma": 30,
+              "wisdom": 45,
+              "message": "Maya takes a breath. \"Notice the craving without judging... When I just feel it instead of running from it, it loses its power. This is breaking the chain of tanha!\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 35,
+          "interaction_count": 2
+        },
+        "text": "Maya greets you with a genuine smile. No phone in sight.\n\n\"I still use my phone, but differently now. I notice when the craving comes up. Sometimes I still scroll, but I'm not controlled by it anymore. I found out I actually enjoy real conversations!\" She laughs.",
+        "choices": [
+          {
+            "text": "That's wonderful progress. You broke free from craving.",
+            "consequences": {
+              "merit": 20,
+              "karma": 20,
+              "wisdom": 35,
+              "message": "Maya nods. \"It's ongoing work, but I understand the hungry ghost now. I don't have to feed it.\"",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "wise_elder": {
+    "name": "Elder Song",
+    "title": "The Dharma Teacher",
+    "realm": "human",
+    "x": 1600,
+    "y": 1200,
+    "color": [
+      100,
+      149,
+      237
+    ],
+    "description": "A wise teacher who has walked the path and understands suffering.",
+    "type": "teacher",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Elder Song sits peacefully beneath a tree, eyes closed in meditation. When you approach, she opens her eyes and smiles gently.\n\n\"Welcome, traveler. I see you are beginning to walk the path. The Buddha taught that all beings experience dukkha - suffering, unsatisfactoriness. Do you understand why you suffer?\"",
+        "choices": [
+          {
+            "text": "I suffer because bad things happen to me.",
+            "consequences": {
+              "merit": 0,
+              "karma": 0,
+              "wisdom": 10,
+              "message": "Elder Song nods compassionately. \"That is how it appears at first. Return when you are ready to see more deeply.\"",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "I suffer because I cling to impermanent things.",
+            "consequences": {
+              "merit": 20,
+              "karma": 20,
+              "wisdom": 40,
+              "message": "Elder Song's eyes light up. \"Yes! You are beginning to see the truth. This is the Second Noble Truth - suffering arises from craving and attachment.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 20,
+          "interaction_count": 1
+        },
+        "text": "Elder Song welcomes you back.\n\n\"You have grown in wisdom, I see. Tell me, if suffering comes from craving, what is the path out of suffering?\"",
+        "choices": [
+          {
+            "text": "Get rid of all desires and wants?",
+            "consequences": {
+              "merit": 0,
+              "karma": 0,
+              "wisdom": 15,
+              "message": "Elder Song shakes her head gently. \"That would be another extreme. The Buddha taught the Middle Way - neither indulgence nor harsh denial.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Follow the Noble Eightfold Path with wisdom and compassion.",
+            "consequences": {
+              "merit": 30,
+              "karma": 30,
+              "wisdom": 55,
+              "message": "Elder Song bows. \"Yes! Right View, Right Intention, Right Speech, Right Action, Right Livelihood, Right Effort, Right Mindfulness, Right Concentration. This is the Way.\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 50,
+          "interaction_count": 2
+        },
+        "text": "Elder Song stands and bows deeply to you.\n\n\"You have become a teacher yourself through your wisdom and compassion. The Temple awaits you. May you find refuge in the Triple Gem and may you, in turn, be a refuge for others.\"",
+        "choices": [
+          {
+            "text": "Thank you for your guidance, Elder.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 40,
+              "message": "Elder Song: \"We are all teachers and students on this path. Go with my blessings.\"",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "blind_follower": {
+    "name": "Dev",
+    "title": "The Blind Follower",
+    "realm": "animal",
+    "x": 1000,
+    "y": 1900,
+    "color": [
+      139,
+      69,
+      19
+    ],
+    "description": "A person who never questions, just follows what others do.",
+    "type": "suffering",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Dev is part of a group doing something harmful - spreading gossip about someone who isn't here to defend themselves. Everyone is laughing and joining in.\n\n\"Come on, it's just a joke! Everyone's doing it. Don't be such a buzzkill. The Buddha taught about 'moha' - ignorance and delusion - where we act without thinking. But that's not me, right? You're either with us or against us!\"\n\nWhat do you do?",
+        "choices": [
+          {
+            "text": "Yeah, they ARE pretty weird! *joins in laughing*",
+            "consequences": {
+              "merit": -20,
+              "karma": -30,
+              "wisdom": -25,
+              "message": "You acted without thinking, following the herd. Your conscience troubles you - you know this is wrong, but you did it anyway to fit in.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "*stays silent, doesn't participate but doesn't speak up*",
+            "consequences": {
+              "merit": 5,
+              "karma": 10,
+              "wisdom": 20,
+              "message": "You avoided doing harm by not joining in. But silence in the face of wrong is still a missed opportunity for courage and compassion.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "This doesn't feel right. I'm not going to mock someone who isn't here.",
+            "consequences": {
+              "merit": 30,
+              "karma": 35,
+              "wisdom": 45,
+              "message": "True courage! Dev looks uncomfortable. \"Wait... maybe you're right. I didn't really think about it. I was just... going along.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 25,
+          "interaction_count": 1
+        },
+        "text": "Dev approaches you thoughtfully.\n\n\"I've been thinking about what you said. I realized I do a LOT of things without questioning them. I just follow what everyone else does. But... how do I know what's right on my own?\"",
+        "choices": [
+          {
+            "text": "Just keep doing what you're doing. Following others is easier.",
+            "consequences": {
+              "merit": -10,
+              "karma": -15,
+              "wisdom": -10,
+              "message": "Dev nods uncertainly. The spark of awareness dims. They return to the comfortable numbness of the herd.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Pause before you act. Ask yourself: Does this cause harm? Is this kind?",
+            "consequences": {
+              "merit": 30,
+              "karma": 35,
+              "wisdom": 50,
+              "message": "Dev's eyes light up. \"That's it! I can THINK before I act. I have my own mind. I don't have to just react like an animal.\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 60,
+          "interaction_count": 2
+        },
+        "text": "Dev greets you with a confident smile.\n\n\"I stopped someone from bullying today. Everyone else was just watching, but I remembered what you taught me - I have a choice. I can think for myself. Thank you for waking me up.\"",
+        "choices": [
+          {
+            "text": "That took real awareness and courage. You're no longer asleep.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 35,
+              "message": "Dev bows. \"I'm awake now. I see clearly. I choose consciously. This is freedom.\"",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "envious_artist": {
+    "name": "Rin",
+    "title": "The Jealous Artist",
+    "realm": "asura",
+    "x": 1400,
+    "y": 1100,
+    "color": [
+      128,
+      0,
+      128
+    ],
+    "description": "A talented artist consumed by comparison and jealousy.",
+    "type": "suffering",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Rin is scrolling through social media, looking at other artists' work. Their face is tight with envy.\n\n\"Look at this! 10,000 likes! My work is just as good - better even! Why do THEY get all the attention? It's not FAIR! I work so hard and get nothing. They probably cheated or know someone...\"",
+        "choices": [
+          {
+            "text": "You're right, they don't deserve it. You're way better!",
+            "consequences": {
+              "merit": -15,
+              "karma": -20,
+              "wisdom": -15,
+              "message": "Rin nods bitterly. The jealousy grows. Both of you are trapped in the prison of comparison, unable to see your own worth.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "Comparing yourself to others is stealing your own joy.",
+            "consequences": {
+              "merit": 20,
+              "karma": 20,
+              "wisdom": 35,
+              "message": "Rin pauses. \"You're right. I'm so busy looking at what they have, I can't enjoy what I create. I'm making myself miserable.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "What if you celebrated their success? Their joy doesn't diminish yours.",
+            "consequences": {
+              "merit": 35,
+              "karma": 35,
+              "wisdom": 50,
+              "message": "Rin looks shocked. \"Celebrate... their success? I never thought... Wait, if I could feel happy FOR them, I'd be free from this jealousy!\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 40,
+          "interaction_count": 1
+        },
+        "text": "Rin shows you their latest artwork - it's beautiful.\n\n\"I tried what you said. When I see someone else's amazing work now, I try to feel happy for them instead of threatened. But it's HARD. Part of me still thinks their success means my failure.\"",
+        "choices": [
+          {
+            "text": "There's only so much success to go around. You need to compete harder.",
+            "consequences": {
+              "merit": -15,
+              "karma": -20,
+              "wisdom": -15,
+              "message": "Rin's face falls. \"You're right. It IS a competition.\" The jealousy returns, fierce as ever.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Success isn't pie - their slice doesn't make yours smaller. There's room for everyone.",
+            "consequences": {
+              "merit": 35,
+              "karma": 35,
+              "wisdom": 55,
+              "message": "Rin takes a deep breath. \"Abundance, not scarcity. Their light doesn't dim mine. We can all shine. This is mudita - sympathetic joy!\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 75,
+          "interaction_count": 2
+        },
+        "text": "Rin is excitedly showing you another artist's work.\n\n\"Look at this! Isn't it incredible? I used to see this and feel jealous. Now I just feel... inspired! And you know what's amazing? When I stopped comparing, my own work got so much better. Joy is the best teacher.\"",
+        "choices": [
+          {
+            "text": "You found mudita - the joy in others' happiness. That's beautiful.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 40,
+              "message": "Rin beams. \"No more jealousy. No more comparison. Just creation and celebration. I'm finally free.\"",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "comfortable_executive": {
+    "name": "Marcus",
+    "title": "The Complacent Success",
+    "realm": "deva",
+    "x": 1700,
+    "y": 1500,
+    "color": [
+      255,
+      215,
+      0
+    ],
+    "description": "A successful executive who has everything but denies impermanence.",
+    "type": "suffering",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Marcus reclines in luxury, surrounded by success.\n\n\"Life is PERFECT. Great job, beautiful family, money in the bank, respect everywhere I go. I've figured it all out! No more struggle for me. I've made it to the top and I'm staying here. Why would I need to change or grow? I'm already perfect!\"",
+        "choices": [
+          {
+            "text": "You're absolutely right! You've got it all figured out.",
+            "consequences": {
+              "merit": -10,
+              "karma": -15,
+              "wisdom": -20,
+              "message": "Marcus smiles smugly. But the seeds of future suffering are already planted in this complacency. Change is coming, ready or not.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "Success is wonderful. But everything changes. How will you handle when it does?",
+            "consequences": {
+              "merit": 20,
+              "karma": 20,
+              "wisdom": 35,
+              "message": "Marcus frowns. \"That's... actually a good question. I never thought about losing all this. I've been pretending it will last forever.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Even heaven is impermanent in Buddhist teaching. Comfort can blind us to truth.",
+            "consequences": {
+              "merit": 30,
+              "karma": 30,
+              "wisdom": 50,
+              "message": "Marcus's eyes widen. \"So even success and happiness are temporary? Then what's the point... wait, maybe THAT'S the point. To not cling even to good things.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 45,
+          "interaction_count": 1
+        },
+        "text": "Marcus looks less comfortable than before.\n\n\"My company announced layoffs. I'm safe... for now. But for the first time, I realized it could all disappear. The thought terrifies me. If I'm not successful Marcus, who am I?\"",
+        "choices": [
+          {
+            "text": "Just work harder to secure your position. Stay on top at any cost.",
+            "consequences": {
+              "merit": -15,
+              "karma": -20,
+              "wisdom": -15,
+              "message": "Marcus nods grimly, but the fear remains. Clinging tighter to success only increases suffering when it inevitably changes.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Your worth isn't your job. You are more than your success or failure.",
+            "consequences": {
+              "merit": 35,
+              "karma": 35,
+              "wisdom": 55,
+              "message": "Marcus tears up. \"I've been so identified with my achievements. But you're right - I'm a person, not a position. This is who I am, regardless of circumstances.\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 80,
+          "interaction_count": 2
+        },
+        "text": "Marcus greets you with genuine warmth, not the polished corporate smile.\n\n\"I actually took a step back at work. Less hours, more time with family. And you know what? I'm happier. I was so busy being successful, I forgot to actually LIVE. Thank you for showing me that even good things must be held lightly.\"",
+        "choices": [
+          {
+            "text": "You learned non-attachment even to pleasure. That's true wisdom.",
+            "consequences": {
+              "merit": 25,
+              "karma": 25,
+              "wisdom": 40,
+              "message": "Marcus bows. \"Success, failure, pleasure, pain - I can experience them all without clinging. This is true freedom.\"",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "evil_mara": {
+    "name": "Mara",
+    "title": "The Deceiver - Lord of Death and Desire",
+    "realm": "temple",
+    "x": 1600,
+    "y": 1400,
+    "color": [
+      139,
+      0,
+      0
+    ],
+    "description": "The final obstacle before enlightenment. Mara, who represents all delusions and attachments.",
+    "type": "suffering",
+    "special": "mara",
+    "dialogues": [
+      {
+        "requirements": {
+          "wisdom": 220,
+          "merit": 180,
+          "karma": 150
+        },
+        "text": "A dark figure materializes before you, blocking the path to the temple. Mara's eyes burn with malevolent intelligence.\n\n\"So... you think you're ready for enlightenment? I am Mara, Lord of Death and Desire. I stopped even the Buddha under the Bodhi tree! Turn back now, for you are NOT worthy. You are weak, foolish, undeserving. Give up this futile quest!\"\n\nMara's presence fills you with doubt and fear. How do you respond?",
+        "choices": [
+          {
+            "text": "You're right... I'm not ready. I should give up.",
+            "consequences": {
+              "merit": -50,
+              "karma": -50,
+              "wisdom": -50,
+              "message": "Mara laughs cruelly as doubt consumes you. \"Yes! Despair! You will NEVER be free!\" The path to the temple grows dark. You have failed the final test.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "I've come too far to turn back now! I WILL reach enlightenment!",
+            "consequences": {
+              "merit": 10,
+              "karma": 10,
+              "wisdom": 15,
+              "message": "Determination is good, but Mara senses your ego. \"'I will'? 'MY enlightenment'? You still cling to self! You have not understood!\" Mara remains, stronger.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "I see you, Mara. You are illusion. I do not fight you, for there is nothing to fight.",
+            "consequences": {
+              "merit": 50,
+              "karma": 50,
+              "wisdom": 60,
+              "message": "Mara recoils! \"What?! You... you see through the illusion?\" For a moment, his form flickers. \"But I am not defeated yet! Face your final test!\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 235,
+          "merit": 200,
+          "karma": 170,
+          "interaction_count": 1
+        },
+        "text": "Mara's form shifts and changes, becoming the people you've hurt, the opportunities you've missed, the failures you've experienced.\n\n\"Look at your past! All your mistakes! All your suffering! All the people you failed! You carry so much karma, so much guilt. How can someone like YOU dare approach enlightenment? You are stained, unworthy, broken!\"\n\nThe weight of your past threatens to crush you.",
+        "choices": [
+          {
+            "text": "You're right, I've done terrible things. I don't deserve this.",
+            "consequences": {
+              "merit": -40,
+              "karma": -40,
+              "wisdom": -40,
+              "message": "Guilt overwhelms you. Mara's laughter echoes. \"Yes! Drown in your shame! You will never escape your past!\" The darkness deepens.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "My past does not define me. I have learned, grown, and changed.",
+            "consequences": {
+              "merit": 30,
+              "karma": 30,
+              "wisdom": 40,
+              "message": "Good, but Mara persists. \"Changed? You still hold onto identity - 'MY past', 'I have grown'. The self is the root of all suffering!\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "The past is gone. The future is not yet here. There is only this present moment, free from all story.",
+            "consequences": {
+              "merit": 60,
+              "karma": 60,
+              "wisdom": 70,
+              "message": "Mara screams! \"NO! You understand impermanence! You see through the illusion of self!\" His form becomes transparent, flickering like smoke. \"But I have ONE final weapon...\"",
+              "npc_state": "transformed"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 250,
+          "merit": 220,
+          "karma": 190,
+          "interaction_count": 2
+        },
+        "text": "Mara's voice becomes soft, seductive, gentle.\n\n\"You have done so well. You are clearly enlightened already! Why go further? You could teach others, be revered, be special. You have EARNED rest. You have EARNED recognition. Stay here, in this pleasant state. You don't need to go further...\"\n\nThis is the most dangerous temptation - the subtle attachment to spiritual pride.",
+        "choices": [
+          {
+            "text": "You're right. I AM enlightened. I should start teaching others now.",
+            "consequences": {
+              "merit": -30,
+              "karma": -30,
+              "wisdom": -30,
+              "message": "Pride fills you. Mara smiles. \"Yes! Spiritual pride - the WORST attachment! You have failed!\" The temple doors slam shut.",
+              "npc_state": "transformed"
+            }
+          },
+          {
+            "text": "There is no 'I' that is enlightened. There is no one to be proud. There is only the path, only the practice, only this moment's truth.",
+            "consequences": {
+              "merit": 70,
+              "karma": 70,
+              "wisdom": 80,
+              "message": "BRILLIANT LIGHT FILLS THE WORLD! Mara DISSOLVES completely, screaming as he vanishes: \"NOOOO! You have seen through ALL illusions! You have defeated me as the Buddha did! The path is OPEN!\" The temple doors shine with golden light. You are ready.",
+              "npc_state": "enlightened"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "the_buddha": {
+    "name": "The Buddha",
+    "title": "The Awakened One - Teacher of Gods and Humans",
+    "realm": "temple",
+    "x": 1600,
+    "y": 1600,
+    "color": [
+      255,
+      215,
+      0
+    ],
+    "description": "The Fully Awakened One who discovered the path to liberation from suffering.",
+    "type": "teacher",
+    "special": "buddha",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "You stand in the presence of the Buddha. Golden light radiates from his form. His eyes hold infinite compassion and perfect wisdom. He smiles gently.\n\n\"Welcome, dear one. You have completed a great journey. You overcame Mara, as I once did under the Bodhi tree. Now I will share with you the teachings that lead to the end of all suffering.\n\nFirst, understand the Four Noble Truths...\"",
+        "choices": [
+          {
+            "text": "Please teach me, Blessed One.",
+            "consequences": {
+              "merit": 50,
+              "karma": 50,
+              "wisdom": 100,
+              "message": "The Buddha speaks:\n\n\"The First Noble Truth: Life involves Dukkha - suffering, unsatisfactoriness, stress. Birth is suffering, aging is suffering, death is suffering. Not getting what you want is suffering.\n\nThe Second Noble Truth: The cause of Dukkha is Tanha - craving, thirst, clinging. We suffer because we grasp at impermanent things.\n\nThe Third Noble Truth: There IS an end to suffering - Nibbana. When craving ceases, suffering ceases.\n\nThe Fourth Noble Truth: The path to end suffering is the Noble Eightfold Path.\n\nDo you wish to hear about the Eightfold Path?\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "interaction_count": 1
+        },
+        "text": "The Buddha's eyes shine with wisdom.\n\n\"The Noble Eightfold Path is the Middle Way between indulgence and harsh denial. It has three sections: Wisdom (Panna), Ethical Conduct (Sila), and Mental Discipline (Samadhi).\n\nShall I explain each part?\"",
+        "choices": [
+          {
+            "text": "Yes, Blessed One, please teach me the Path.",
+            "consequences": {
+              "merit": 50,
+              "karma": 50,
+              "wisdom": 100,
+              "message": "The Buddha teaches:\n\n\"WISDOM: 1) Right View - understand the Four Noble Truths. 2) Right Intention - intention of renunciation, goodwill, and harmlessness.\n\nETHICAL CONDUCT: 3) Right Speech - truthful, helpful, kind speech. 4) Right Action - ethical conduct, the Five Precepts. 5) Right Livelihood - earn living harmlessly.\n\nMENTAL DISCIPLINE: 6) Right Effort - cultivate wholesome states. 7) Right Mindfulness - awareness of body, feelings, mind, phenomena. 8) Right Concentration - develop deep meditation.\n\nNow, shall I teach you about meditation practice?\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "interaction_count": 2
+        },
+        "text": "The Buddha gestures to a meditation cushion that appears before you.\n\n\"Now I will teach you the two wings of practice: Samadhi (concentration) and Vipassana (insight).\n\nSamadhi is developing calm, focused mind through meditation on the breath, on loving-kindness, on the present moment.\n\nVipassana is seeing things as they truly are: impermanent (Anicca), unsatisfactory (Dukkha), and not-self (Anatta).\n\nTogether, these lead to liberation. Will you commit to the practice?\"",
+        "choices": [
+          {
+            "text": "I commit to the practice of Samadhi and Vipassana. I will walk the Path.",
+            "consequences": {
+              "merit": 100,
+              "karma": 100,
+              "wisdom": 150,
+              "message": "The Buddha places his hand on your head. INFINITE GOLDEN LIGHT floods your being!\n\n\"Sadhu! Sadhu! Sadhu! Excellent! You have completed the journey!\n\nWELCOME TO THE TRIPLE GEM!\n\nYou have found refuge in the Buddha (the teacher), the Dhamma (the teaching), and the Sangha (the community).\n\nYou are leaving the cruel world of suffering behind. The cycle of Samsara - birth, death, and endless craving - no longer binds you.\n\nThe right path to Nibbana awaits! This is the path of liberation, the path of peace, the path beyond all suffering.\n\nRemember - enlightenment is not a destination, it is the path itself. Continue to practice. Be a light unto yourself. Help all beings find freedom from suffering.\n\nMay you be happy. May you be peaceful. May you be liberated.\n\nMay all beings be free from suffering.\"\n\nYOU HAVE REACHED THE TRIPLE GEM!",
+              "npc_state": "enlightened",
+              "game_won": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "swatter": {
+    "name": "Jamie",
+    "title": "The Regretful Hunter",
+    "realm": "hell",
+    "x": 2600,
+    "y": 1800,
+    "color": [
+      180,
+      60,
+      60
+    ],
+    "description": "A child haunted by taking life, even of small creatures.",
+    "type": "precept_1_killing",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Jamie sits by a stream, staring at their hands. Tears stream down their face.\n\n\"I... I killed it. The butterfly was so beautiful, just landing on the flower. I don't know why I did it. I just... swatted it. And now it's dead. It was alive, and now it's not, and I can NEVER bring it back.\"\n\nJamie's voice breaks. \"I can still see its wings crumpled in my hand. What's wrong with me?\"\n\nHow do you respond?",
+        "choices": [
+          {
+            "text": "It's just a bug. It doesn't matter.",
+            "consequences": {
+              "merit": -20,
+              "karma": -30,
+              "wisdom": -15,
+              "message": "Jamie's eyes harden. The compassion dies. \"Just a bug... yeah. Just a bug.\" But the guilt remains, buried and festering.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "You made a mistake. We all have impulses we regret.",
+            "consequences": {
+              "merit": 15,
+              "karma": 20,
+              "wisdom": 25,
+              "message": "Jamie nods slowly. \"It WAS an impulse. I didn't think. But... that butterfly can't come back because of my thoughtless moment.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "That life mattered. Feeling this pain shows you understand the First Precept - to not take life. Your remorse is compassion awakening.",
+            "consequences": {
+              "merit": 30,
+              "karma": 35,
+              "wisdom": 45,
+              "message": "Jamie looks up, tears still flowing. \"The First Precept... to refrain from taking life. Every being wants to live, just like me. I'll never forget this feeling. I never want to cause death again.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 20,
+          "interaction_count": 1
+        },
+        "text": "Jamie looks up when you approach.\n\n\"I've been thinking a lot. Yesterday I found a spider in my room. Before, I would have just... killed it without thinking. But I remembered the butterfly. I remembered that feeling.\"\n\n\"So I caught the spider carefully in a cup and put it outside. My hands were shaking the whole time - I was scared of it! But it deserved to live, you know?\"\n\nJamie smiles sadly. \"Is that what Buddhism means by the First Precept?\"",
+        "choices": [
+          {
+            "text": "You're being too sensitive. It's okay to kill pests.",
+            "consequences": {
+              "merit": -15,
+              "karma": -20,
+              "wisdom": -10,
+              "message": "Jamie's face falls. The newfound compassion wavers. \"Maybe you're right... but it still feels wrong...\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Yes! You saw all life as precious, even when afraid. That's courage AND compassion.",
+            "consequences": {
+              "merit": 35,
+              "karma": 40,
+              "wisdom": 50,
+              "message": "Jamie beams. \"Even small lives matter! The Buddha taught ahimsa - non-harming. I can practice that every day, with every creature. This changes everything!\"",
+              "npc_state": "helped_twice"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 45,
+          "interaction_count": 2
+        },
+        "text": "Jamie runs up to you excitedly.\n\n\"I started a kindness club at school! We rescue worms from the sidewalk after rain and put them back in the soil. We made bug catchers so no one has to kill spiders. Some kids laughed at first, but now five of us do it!\"\n\n\"That butterfly changed me. Its death taught me that every life is sacred. Now I'm teaching others!\"",
+        "choices": [
+          {
+            "text": "You transformed guilt into compassion for all beings. The First Precept lives in you.",
+            "consequences": {
+              "merit": 40,
+              "karma": 45,
+              "wisdom": 55,
+              "message": "Jamie bows. \"From one butterfly's death, I learned to protect all life. May all beings be safe from harm.\"",
+              "npc_state": "complete"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "thief": {
+    "name": "Riley",
+    "title": "The Guilty Thief",
+    "realm": "hungry_ghost",
+    "x": 2400,
+    "y": 900,
+    "color": [
+      200,
+      100,
+      50
+    ],
+    "description": "Someone who stole and cannot escape the shame.",
+    "type": "precept_2_stealing",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Riley clutches a small toy in their hands, crying quietly.\n\n\"It's my best friend's favorite action figure. They saved up for MONTHS to buy it. And I... I took it. I told myself I'd just 'borrow' it. But that's a lie. I stole it.\"\n\nRiley's voice cracks. \"They came to school today so sad, saying someone stole their toy. They don't know it was me. They TRUST me. And I betrayed them.\"\n\n\"Every time I look at it, I feel sick. But I'm too scared to give it back. What do I do?\"",
+        "choices": [
+          {
+            "text": "Just keep it. They'll get over it eventually.",
+            "consequences": {
+              "merit": -25,
+              "karma": -35,
+              "wisdom": -20,
+              "message": "Riley's shame deepens. They hide the toy away, but the guilt eats at them every day. The friendship slowly dies, poisoned by the unspoken theft.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "You could secretly return it without them knowing it was you.",
+            "consequences": {
+              "merit": 10,
+              "karma": 15,
+              "wisdom": 20,
+              "message": "Riley considers this. \"But... that's still dishonest. I'd still be lying by hiding what I did. Is that really better?\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "The Second Precept teaches us not to take what isn't given. The only way to truly heal this is honesty - return it and tell the truth.",
+            "consequences": {
+              "merit": 30,
+              "karma": 40,
+              "wisdom": 50,
+              "message": "Riley trembles. \"You're right. I have to face what I did. The shame I feel is nothing compared to the pain I caused them. I'll tell the truth, whatever happens.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 25,
+          "interaction_count": 1
+        },
+        "text": "Riley's eyes are red but there's a lightness to their shoulders.\n\n\"I did it. I told them the truth. I gave back the toy and said I'm sorry.\"\n\n\"They cried. I cried. They were so hurt - not just about the toy, but that I lied and hid it. But then... they said they forgave me. They said our friendship means more than any toy.\"\n\nRiley wipes their eyes. \"I almost lost my best friend over something that wasn't even mine. Why did I want it so badly?\"",
+        "choices": [
+          {
+            "text": "Because you wanted what they had. That's natural.",
+            "consequences": {
+              "merit": 5,
+              "karma": 5,
+              "wisdom": 15,
+              "message": "Riley nods uncertainly. \"I guess... but that wanting almost destroyed everything...\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Stealing comes from craving - wanting what others have. But taking it only brings suffering, never satisfaction.",
+            "consequences": {
+              "merit": 35,
+              "karma": 40,
+              "wisdom": 55,
+              "message": "Riley's eyes widen. \"That's it! Even when I had the toy, I felt TERRIBLE. Stealing can never make us happy - it only creates suffering for everyone. I understand the Second Precept now!\"",
+              "npc_state": "helped_twice"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 50,
+          "interaction_count": 2
+        },
+        "text": "Riley smiles when they see you.\n\n\"My friend and I are closer than ever now. And you know what? I started a 'Free Toy Swap' at school. Kids can trade toys they don't want anymore. No one has to steal - we can share!\"\n\n\"I learned that taking what isn't given creates suffering, but GIVING freely creates joy. Thank you for helping me see that.\"",
+        "choices": [
+          {
+            "text": "You turned your mistake into generosity. That's the true meaning of the Second Precept.",
+            "consequences": {
+              "merit": 40,
+              "karma": 45,
+              "wisdom": 50,
+              "message": "Riley bows. \"I respect what belongs to others. And I love to give. The Second Precept - to refrain from taking what is not given - has set me free.\"",
+              "npc_state": "complete"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "heartbreaker": {
+    "name": "Sam",
+    "title": "The Regretful Cheater",
+    "realm": "human",
+    "x": 1400,
+    "y": 1400,
+    "color": [
+      120,
+      100,
+      140
+    ],
+    "description": "Someone who betrayed trust in a relationship.",
+    "type": "precept_3_sexual_misconduct",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Sam sits with their head down, voice barely above a whisper.\n\n\"I had someone who loved me. Really loved me. We promised to be honest with each other, to be loyal. But then someone else paid attention to me, and I... I kissed them. Behind my partner's back.\"\n\n\"I broke their trust. I broke their heart. When they found out, they looked at me like they didn't even know me. Like I was a stranger.\"\n\nSam's hands shake. \"I destroyed something beautiful because I couldn't control myself for one moment. How do I live with that?\"",
+        "choices": [
+          {
+            "text": "Everyone makes mistakes in relationships. They'll forgive you eventually.",
+            "consequences": {
+              "merit": -10,
+              "karma": -15,
+              "wisdom": -10,
+              "message": "Sam wants to believe this, but knows it's empty comfort. The trust is shattered. Forgiveness isn't guaranteed, and minimizing the harm doesn't heal it.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "You betrayed their trust. That's serious. But you can learn to be trustworthy again.",
+            "consequences": {
+              "merit": 20,
+              "karma": 25,
+              "wisdom": 35,
+              "message": "Sam nods, tears flowing. \"I can't undo what I did. But I can become someone who never does this again. I can learn to be worthy of trust.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "The Third Precept teaches sexual responsibility - to not cause harm through our desires. You understand now why this precept exists.",
+            "consequences": {
+              "merit": 30,
+              "karma": 35,
+              "wisdom": 50,
+              "message": "Sam looks up with recognition. \"Sexual misconduct... it's not just about rules. It's about not hurting people through betrayal and broken promises. I caused real suffering. I see that now.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 30,
+          "interaction_count": 1
+        },
+        "text": "Sam meets your eyes, no longer hiding.\n\n\"I wrote them a letter. A real apology - not making excuses, just owning what I did. I told them I understand if they can't forgive me. That I understand I broke something precious.\"\n\n\"They wrote back. They said they need time, maybe forever. But they appreciated my honesty.\"\n\n\"I'm learning that love isn't just feelings - it's choices. And I made terrible choices.\"",
+        "choices": [
+          {
+            "text": "At least you tried. That's all you can do.",
+            "consequences": {
+              "merit": 10,
+              "karma": 10,
+              "wisdom": 15,
+              "message": "Sam nods, but knows there's more to learn here.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Right action in relationships means keeping commitments and respecting boundaries. That's what the Third Precept teaches.",
+            "consequences": {
+              "merit": 35,
+              "karma": 40,
+              "wisdom": 55,
+              "message": "Sam's face clears with understanding. \"It's about integrity! Every relationship needs trust, boundaries, honesty. Sexual misconduct violates all of that. I won't make this mistake again.\"",
+              "npc_state": "helped_twice"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 60,
+          "interaction_count": 2
+        },
+        "text": "Sam has a quiet dignity now.\n\n\"We're not together anymore. That relationship ended. But I've learned so much. In my new relationships - friendships, family, everyone - I practice honesty and respect for boundaries.\"\n\n\"I volunteer at a teen crisis line now. I talk to people struggling with relationship issues. I share my story - not to excuse what I did, but to show that we can grow from our worst mistakes.\"\n\n\"Thank you for helping me understand the Third Precept.\"",
+        "choices": [
+          {
+            "text": "You transformed harm into helping others. That's powerful growth.",
+            "consequences": {
+              "merit": 40,
+              "karma": 45,
+              "wisdom": 50,
+              "message": "Sam bows. \"The Third Precept - to refrain from sexual misconduct - means honoring trust, keeping commitments, respecting boundaries. I live this now.\"",
+              "npc_state": "complete"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drinker": {
+    "name": "Alex",
+    "title": "The Regretful Drinker",
+    "realm": "animal",
+    "x": 1200,
+    "y": 2100,
+    "color": [
+      140,
+      120,
+      80
+    ],
+    "description": "Someone who lost themselves to intoxication.",
+    "type": "precept_5_intoxicants",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Alex sits with their head in their hands, voice shaking.\n\n\"I got drunk at a party. Really drunk. I don't even remember half the night. But my friends told me what I did.\"\n\n\"I said horrible things to people I care about. I broke someone's phone. I tried to drive home - my friends had to take my keys away. I could have KILLED someone.\"\n\nAlex looks up, eyes haunted. \"That wasn't me. But it WAS me. I chose to drink that much. I lost control of myself. What if I'd hurt someone? What if I'd died?\"",
+        "choices": [
+          {
+            "text": "Everyone gets too drunk sometimes. Just be more careful next time.",
+            "consequences": {
+              "merit": -20,
+              "karma": -30,
+              "wisdom": -25,
+              "message": "Alex wants to believe this, but fear remains. Minimizing what happened doesn't change how dangerous it was. The pattern will likely repeat.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "You lost your ability to make good choices. That's scary, and you're right to take it seriously.",
+            "consequences": {
+              "merit": 20,
+              "karma": 25,
+              "wisdom": 35,
+              "message": "Alex nods vigorously. \"Yes! I became someone else - someone who could hurt people, hurt myself. I never want to lose myself like that again.\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "The Fifth Precept warns against intoxicants because they cloud our judgment and mindfulness. You experienced exactly why.",
+            "consequences": {
+              "merit": 30,
+              "karma": 35,
+              "wisdom": 50,
+              "message": "Alex's eyes widen. \"That's it! When I was drunk, I couldn't think clearly, couldn't be mindful, couldn't make ethical choices. Intoxication steals our ability to practice ALL the other precepts!\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 25,
+          "interaction_count": 1
+        },
+        "text": "Alex looks healthier, clearer-eyed.\n\n\"I stopped drinking completely. My friends said I was overreacting, that I should just 'moderate.' But I realized - why do I need to alter my consciousness to have fun? What am I running from?\"\n\n\"Last weekend there was another party. Everyone was drinking. I stayed sober. And you know what? I actually had MORE fun. I remember everything. I danced, laughed, connected with people - the REAL me, not the drunk version.\"\n\n\"Is this what the Fifth Precept means? Staying clear and present?\"",
+        "choices": [
+          {
+            "text": "Maybe you're being too extreme. A little drinking is fine.",
+            "consequences": {
+              "merit": -15,
+              "karma": -20,
+              "wisdom": -15,
+              "message": "Alex looks uncertain. \"But... I feel so much better being clear-minded...\"",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "Yes! Mindfulness requires a clear mind. Intoxicants prevent us from being fully present and aware.",
+            "consequences": {
+              "merit": 35,
+              "karma": 40,
+              "wisdom": 55,
+              "message": "Alex smiles broadly. \"I want to be AWAKE for my life! Not numbed, not escaped, not clouded. The Fifth Precept protects our clarity and our ability to act wisely!\"",
+              "npc_state": "helped_twice"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 55,
+          "interaction_count": 2
+        },
+        "text": "Alex glows with energy and presence.\n\n\"I'm six months sober now. I started a 'mindful living' group at school - we do meditation, yoga, nature walks. So many teens said they feel pressured to drink or do drugs, but they don't really want to.\"\n\n\"We're learning we can have fun, deal with stress, and connect with others without needing substances. We can be fully present for our lives!\"\n\n\"Thank you for helping me understand why clarity matters.\"",
+        "choices": [
+          {
+            "text": "You're helping others stay mindful and present. That's beautiful service.",
+            "consequences": {
+              "merit": 40,
+              "karma": 45,
+              "wisdom": 50,
+              "message": "Alex bows. \"The Fifth Precept - to refrain from intoxicants that cloud the mind - keeps us awake, aware, and able to practice wisdom. I'll protect this clarity forever.\"",
+              "npc_state": "complete"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "liar": {
+    "name": "Taylor",
+    "title": "The Tangled Liar",
+    "realm": "hungry_ghost",
+    "x": 2000,
+    "y": 700,
+    "color": [
+      180,
+      120,
+      60
+    ],
+    "description": "Someone trapped in a web of lies.",
+    "type": "precept_4_false_speech",
+    "dialogues": [
+      {
+        "requirements": {},
+        "text": "Taylor paces nervously, words tumbling out.\n\n\"I lied about why I missed school. Then I had to lie to cover that lie. Then another lie. Now I can't remember what I told who. My parents, my teachers, my friends - everyone has a different story.\"\n\n\"Today my mom talked to my teacher. The lies didn't match. They both looked at me and I could see it - they don't trust me anymore. About ANYTHING.\"\n\nTaylor's voice breaks. \"I'm so tangled up in lies, I don't even know what's true anymore. I just wanted to avoid getting in trouble. Now everything's so much worse.\"",
+        "choices": [
+          {
+            "text": "Just make up one more lie to explain the contradictions.",
+            "consequences": {
+              "merit": -25,
+              "karma": -35,
+              "wisdom": -30,
+              "message": "Taylor tries, but the web of lies grows impossibly tangled. Trust crumbles completely. No one believes anything they say anymore. They're trapped.",
+              "npc_state": "initial"
+            }
+          },
+          {
+            "text": "You need to come clean. It will be hard, but it's the only way out.",
+            "consequences": {
+              "merit": 20,
+              "karma": 30,
+              "wisdom": 35,
+              "message": "Taylor trembles. \"Tell the truth? After all these lies? They'll be so angry...\" But they know you're right. The lies have created a prison.",
+              "npc_state": "helped_once"
+            }
+          },
+          {
+            "text": "The Fourth Precept teaches truthful speech. Lies trap us and destroy trust. Truth is the only path to freedom.",
+            "consequences": {
+              "merit": 30,
+              "karma": 40,
+              "wisdom": 50,
+              "message": "Taylor stops pacing. \"The Fourth Precept... You're right. Each lie is a chain. I've imprisoned myself. Only truth can break these chains, no matter how scary it is.\"",
+              "npc_state": "helped_once"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 25,
+          "interaction_count": 1
+        },
+        "text": "Taylor looks exhausted but relieved.\n\n\"I told the truth. All of it. To everyone. My parents grounded me. My teacher gave me detention. I lost some friends who felt betrayed by the lies.\"\n\n\"But you know what? I can BREATHE now. I don't have to remember which lie I told to whom. I don't have to be scared of being caught. The truth hurts, but lies hurt more.\"\n\n\"Why did I think lying would make things easier?\"",
+        "choices": [
+          {
+            "text": "Lies seem easier in the moment, but they always make things worse.",
+            "consequences": {
+              "merit": 25,
+              "karma": 30,
+              "wisdom": 40,
+              "message": "Taylor nods firmly. \"Yes! The temporary escape of a lie creates lasting suffering. Truth might be hard, but it's clean. It's free.\"",
+              "npc_state": "helped_twice"
+            }
+          }
+        ]
+      },
+      {
+        "requirements": {
+          "wisdom": 50,
+          "interaction_count": 2
+        },
+        "text": "Taylor stands tall, speaking clearly and calmly.\n\n\"It took months, but my parents trust me again. I had to prove through my actions that I tell the truth now - even when it's uncomfortable, even when I'm scared.\"\n\n\"I started a peer mediation program at school. We help students resolve conflicts through honest communication. I teach them what I learned - that truth builds trust, and trust builds real relationships.\"\n\n\"Lies separated me from everyone. Truth brought me home.\"",
+        "choices": [
+          {
+            "text": "You rebuilt trust through truthful speech. That's the heart of the Fourth Precept.",
+            "consequences": {
+              "merit": 40,
+              "karma": 45,
+              "wisdom": 50,
+              "message": "Taylor bows. \"The Fourth Precept - to refrain from false speech - means speaking truth, building trust, and using words to help rather than harm. I am free now.\"",
+              "npc_state": "complete"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

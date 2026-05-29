@@ -1,0 +1,142 @@
+{
+  "hell_encounter_anger": {
+    "id": "hell_encounter_anger",
+    "realm": "hell",
+    "title": "The Angry Bully",
+    "description": "You encounter someone spreading cruel rumors about you. Others are laughing. Your face burns with humiliation and anger rises in your chest. What will you do?",
+    "choices": [
+      {
+        "text": "I'll spread even worse rumors about them!",
+        "consequences": {
+          "merit": -60,
+          "karma": -90,
+          "wisdom": -45,
+          "message": "Revenge only creates more suffering. The poison of hatred burns in your own heart, causing you pain."
+        }
+      },
+      {
+        "text": "This hurts, but revenge won't heal me.",
+        "consequences": {
+          "merit": 60,
+          "karma": 60,
+          "wisdom": 90,
+          "message": "You recognized the cycle of hatred. The pain remains, but you chose not to add fuel to the fire of anger."
+        }
+      },
+      {
+        "text": "What pain are they carrying that makes them act this way?",
+        "consequences": {
+          "merit": 90,
+          "karma": 90,
+          "wisdom": 135,
+          "message": "Deep wisdom arises. Hurt people hurt people. You see the bully is also suffering, trapped in their own anger and pain."
+        }
+      }
+    ]
+  },
+  "hungry_ghost_craving": {
+    "id": "hungry_ghost_craving",
+    "realm": "hungry_ghost",
+    "title": "The Endless Want",
+    "description": "You find yourself constantly scrolling through social media, comparing yourself to others. Each post makes you want more - more possessions, more success, more validation. But nothing satisfies.",
+    "choices": [
+      {
+        "text": "Just one more scroll. Maybe the next post will make me feel better.",
+        "consequences": {
+          "merit": 0,
+          "karma": -15,
+          "wisdom": 0,
+          "message": "The craving grows stronger. No amount of scrolling fills the emptiness inside. You're trapped in endless wanting."
+        }
+      },
+      {
+        "text": "I notice this feeling of 'not enough.' What am I really seeking?",
+        "consequences": {
+          "merit": 15,
+          "karma": 15,
+          "wisdom": 36,
+          "message": "You begin to see the nature of craving - it's not about the objects, but about an inner hunger that can't be filled externally."
+        }
+      },
+      {
+        "text": "Put the phone down. Breathe. This moment is already enough.",
+        "consequences": {
+          "merit": 30,
+          "karma": 30,
+          "wisdom": 45,
+          "message": "A moment of peace. You realize contentment comes not from having more, but from wanting less. The hungry ghost loses its power."
+        }
+      }
+    ]
+  },
+  "animal_ignorance": {
+    "id": "animal_ignorance",
+    "realm": "animal",
+    "title": "Following the Herd",
+    "description": "Your friends are pressuring you to do something you know is harmful - spreading gossip, cheating on a test, or excluding someone. Everyone else is doing it. If you don't, you'll be the outsider.",
+    "choices": [
+      {
+        "text": "Go along with it. I don't want to be left out.",
+        "consequences": {
+          "merit": -30,
+          "karma": -30,
+          "wisdom": -15,
+          "message": "Acting without thinking, like an animal following the herd. Your conscience troubles you, but you ignored its voice."
+        }
+      },
+      {
+        "text": "Say nothing but don't participate.",
+        "consequences": {
+          "merit": 9,
+          "karma": 6,
+          "wisdom": 15,
+          "message": "You avoided doing harm, but fear kept you silent. A small step toward awareness, but more courage is needed."
+        }
+      },
+      {
+        "text": "Speak up: 'This doesn't feel right. I'm not doing this.'",
+        "consequences": {
+          "merit": 36,
+          "karma": 36,
+          "wisdom": 54,
+          "message": "True courage! You broke free from the herd and followed your conscience. Some may judge you, but you kept your integrity."
+        }
+      }
+    ]
+  },
+  "human_loss": {
+    "id": "human_loss",
+    "realm": "human",
+    "title": "The Grief of Loss",
+    "description": "Someone you deeply love has died. The grief feels unbearable. Everything reminds you of them. The world seems empty and meaningless without their presence.",
+    "choices": [
+      {
+        "text": "Pretend they're not really gone. Avoid thinking about it.",
+        "consequences": {
+          "merit": 0,
+          "karma": 0,
+          "wisdom": -9,
+          "message": "Denial postpones the pain but prevents healing. The grief remains, buried but not resolved, waiting to surface."
+        }
+      },
+      {
+        "text": "Rage at the unfairness. Why did this happen?!",
+        "consequences": {
+          "merit": 0,
+          "karma": -15,
+          "wisdom": 6,
+          "message": "Anger is natural in grief, but clinging to it creates suffering. The universe doesn't operate on fairness - this is dukkha."
+        }
+      },
+      {
+        "text": "Honor their memory while accepting impermanence. All meetings end in parting.",
+        "consequences": {
+          "merit": 24,
+          "karma": 24,
+          "wisdom": 60,
+          "message": "Profound understanding. Death is not a mistake but part of life's nature. Love transcends loss. Their impact on you remains, transformed but not destroyed."
+        }
+      }
+    ]
+  }
+}
