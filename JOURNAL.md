@@ -62,3 +62,43 @@ The bigger lesson from Round 2: it wasn't one big problem. It was dozens of smal
 Built with Claude Code — two sessions covering Pygbag setup, browser debugging, performance diagnosis, surface caching, UI scaling, and bug fixing.
 
 ---
+
+## 2026-05-29 — Building a standalone Windows exe (v2.0)
+
+**TL;DR:** Fixed two PyInstaller path bugs, rebuilt using the right Python version, and shipped two download options — a ready-to-play exe and a source code zip.
+
+**Type:** Bug Fix / Build / Release
+
+**What I built or did**
+
+Packaged the full feature version of Samsara into a double-click Windows exe. The previous v1.0 build was an older, stripped-down version — this one includes save/load, the meditation mini-game, visual effects, and the glossary.
+
+Decided to offer two downloads on itch.io: the compiled exe for regular players, and the raw source code zip for developers or anyone who wants to read and run the Python files directly.
+
+**Why I did it this way**
+
+The source code version required players to install Python and run from the command line — a real barrier for most people. Packaging it with PyInstaller (a tool that bundles Python and all dependencies into a single folder) means anyone can unzip and play.
+
+Keeping the source code version available alongside it means the project stays open for anyone learning Python or Pygame who wants to see how it's built.
+
+**How We Did It**
+
+1. Compared two existing folders — found the v1.0 exe was outdated and the source code folder had a full feature set it didn't include
+2. Fixed `config.py` — it was loading `content/encounters.json` with a hardcoded relative path that breaks inside a compiled exe; added a `resource_path()` helper that points to the right place whether running as a script or bundled exe
+3. Fixed `save_system.py` — saves were pointing to `__file__`, which inside a compiled exe points to a temp folder that gets deleted on close; redirected saves to sit next to the exe instead
+4. Ran PyInstaller — first build used Python 3.14 by default; pygame isn't installed there and the game crashed immediately with "No module named 'pygame'"
+5. Rebuilt explicitly with Python 3.12 (where pygame 2.6.1 lives) — clean build, game launched and played correctly
+6. Zipped the source code separately (excluding build folders) for developers
+7. Uploaded both to itch.io and GitHub Releases
+
+**What I learned**
+
+PyInstaller uses whatever Python version is set as the system default — if that's not the one your game actually runs on, it silently builds an exe that crashes. Always check which Python you're calling before you build.
+
+The two path fixes are easy to miss but critical: data files need `sys._MEIPASS` to find them inside the bundle, and save files need `sys.executable` so they don't vanish when the temp folder clears.
+
+**References / Conversations**
+
+Built with Claude Code — one session covering version comparison, path bug fixes, PyInstaller rebuild, and itch.io upload.
+
+---

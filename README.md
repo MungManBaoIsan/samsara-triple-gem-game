@@ -13,11 +13,13 @@ A top-down 2D Buddhist RPG where every moral choice shapes your soul. Navigate s
 - A fog of ignorance hides the world until your wisdom grows and your vision clears
 - Face Mara (the demon of delusion), then seek the Buddha to win
 - Meditate, keep a journal, read a Buddhist glossary, and unlock achievements along the way
+- Save your progress across three save slots with autosave
 
 ## Built With
 
 - **Python / Pygame** — the game engine
 - **Pygbag** — converts the game to WebAssembly (the technology that lets it run in a browser)
+- **PyInstaller** — packages the game into a standalone Windows exe (no Python install needed)
 - **Itch.io** — where the game is hosted and played
 
 ## How to Run It
@@ -25,13 +27,23 @@ A top-down 2D Buddhist RPG where every moral choice shapes your soul. Navigate s
 **In the browser (easiest):**
 Go to https://mungmanbaoisan.itch.io/samsara-triple-gem-game and click **Play in browser**. Works in Chrome and Edge.
 
-**On Windows:**
-1. Download the zip from itch.io or the [GitHub Release](https://github.com/MungManBaoIsan/samsara-triple-gem-game/releases/tag/v1.0)
+**On Windows — ready to play (v2.0):**
+1. Download `Samsara_Windows_v2.0.zip` from the [GitHub Releases](https://github.com/MungManBaoIsan/samsara-triple-gem-game/releases) or itch.io
 2. Unzip and double-click `Samsara.exe` — no Python or installation required
 
-> The standalone Windows build is packaged with PyInstaller, which bundles the Python runtime and all dependencies into the zip. If you're a developer and already have Python + Pygame installed, you can also run `main.py` directly.
+**On Windows — source code version:**
+For developers or anyone who wants to run or explore the Python files directly.
+1. Download `Samsara_Windows.zip` from [GitHub Releases](https://github.com/MungManBaoIsan/samsara-triple-gem-game/releases) or itch.io
+2. Install Python 3.12 and run `pip install pygame`
+3. Run `main.py` — full instructions in the included `HOW_TO_PLAY_WINDOWS.txt`
+
+> The v2.0 Windows build is packaged with PyInstaller, which bundles Python and all dependencies so anyone can play without any setup.
 
 ## My Journey
+
+**2026-05-29 — Building a standalone Windows exe (v2.0)**
+Packaged the full-featured source code version into a double-click exe and offered both a ready-to-play build and a source code zip on itch.io. Fixed two PyInstaller path bugs before it would work: data files needed a `resource_path()` helper to find them inside the bundle, and save files needed redirecting away from the temp folder that gets deleted on close.
+Key lesson: PyInstaller uses your system's default Python — if that's not the version your game runs on, the exe builds silently but crashes at launch. Always specify the Python version explicitly.
 
 **2026-05-29 — Getting Samsara into the browser: two rounds of fixes**
 Ported the game to Itch.io using Pygbag (WebAssembly). Round 1 was getting it to load at all — fixed audio blocking the loader, a browser security header blocking the CDN, a font rendering bug, and an NPC dialogue layout issue. Round 2 was making it smooth — found and removed 70+ transparent surfaces being allocated every frame across six files, bumped all font sizes, and fixed a broken pause screen.
@@ -40,5 +52,5 @@ Key lessons: browser environments are strict in ways desktop never is — diagno
 ## What's Next
 
 - Add background music that plays after the first user click (browser audio rules require this)
-- Mac and Linux builds via GitHub Actions
 - Mobile-friendly controls for browser play on phones
+- Mac and Linux builds via GitHub Actions
