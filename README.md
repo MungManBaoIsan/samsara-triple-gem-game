@@ -26,8 +26,10 @@ A top-down 2D Buddhist RPG where every moral choice shapes your soul. Navigate s
 Go to https://mungmanbaoisan.itch.io/samsara-triple-gem-game and click **Play in browser**. Works in Chrome and Edge.
 
 **On Windows:**
-1. Download the zip from itch.io
-2. Unzip and run `main.py` with Python installed, or use the standalone exe
+1. Download the zip from itch.io or the [GitHub Release](https://github.com/MungManBaoIsan/samsara-triple-gem-game/releases/tag/v1.0)
+2. Unzip and double-click `Samsara.exe` — no Python or installation required
+
+> The standalone Windows build is packaged with PyInstaller, which bundles the Python runtime and all dependencies into the zip. If you're a developer and already have Python + Pygame installed, you can also run `main.py` directly.
 
 ## My Journey
 
