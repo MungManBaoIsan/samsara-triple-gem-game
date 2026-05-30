@@ -3,6 +3,47 @@ A chronological log of key developments, decisions and learnings throughout this
 
 ---
 
+## 2026-05-30 — Touchscreen controls for the browser version
+
+**TL;DR:**
+- Added on-screen touch controls to the browser build so it plays on iPads and touch laptops
+- Fixed a double-tap bug where every tap counted twice (menus skipped a character, the Story screen flashed shut)
+- Hid the controls until the screen is touched, so desktop players never see them
+
+**Type:** Feature / Bug Fix
+
+**What I built or did**
+
+Added on-screen buttons to the browser version — a D-pad to move, Talk / Strike / Pause during play, an Up / Down / OK cluster for menus, and a Story button to read each past life. The desktop version is untouched; this is browser-only, for touchscreens.
+
+**Why I did it this way**
+
+The browser build keeps all its code packed inside one file (`samsara_game.apk`), and its `main.py` is a special "async" version rewritten for the browser — completely different from the desktop one. So I couldn't just drop the desktop touch files in. I picked the safest route: merge only the touch feature into the existing, working build and change nothing else.
+
+**How We Did It**
+
+1. Looked inside the web zip and found the game packed inside `samsara_game.apk` (not loose files), with a browser-specific async `main.py`
+2. Wrote a new on-screen controls module tailored to the browser build's actual screens — no dead buttons
+3. Added four "virtual" movement flags to the player so the D-pad drives movement alongside the keyboard
+4. Repacked only the 3 changed files into the zip, leaving the other 560+ byte-for-byte identical
+5. Tested by simulating taps in a headless game loop
+6. Fixed the double-tap bug — the browser fires both a finger and a mouse event per tap, so I made finger events authoritative and ignored the duplicate mouse event
+7. Hid the controls until the first real touch, so mouse/keyboard players never see them
+
+**What this means for the app**
+
+iPad and touch-laptop players can now play Samsara in the browser with proper on-screen controls — and desktop players see no change at all.
+
+**What I learned**
+
+A browser sends two events for a single tap (a finger event and a "pretend" mouse event), so without de-duplication every tap fires twice. And the browser build is its own separate async version of the game — you can't swap desktop files into it blindly.
+
+**References / Conversations**
+
+Built with Claude Code — one session covering browser-build inspection, touch control design, safe repackaging, the double-tap fix, and hide-until-touch.
+
+---
+
 ## 2026-05-29 — Getting Samsara into the browser: the full story
 
 **TL;DR:**

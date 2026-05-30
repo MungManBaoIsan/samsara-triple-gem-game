@@ -42,6 +42,10 @@ For developers or anyone who wants to run or explore the Python files directly.
 
 ## My Journey
 
+**2026-05-30 — Touchscreen controls for the browser version**
+Added on-screen controls to the browser build so it plays on iPads and touch laptops — a D-pad, Talk / Strike / Pause buttons, menu navigation, and a Story button to read each past life. The desktop version is untouched; this is browser-only. I merged the feature into the existing build by changing only three files and leaving the other 560+ byte-for-byte identical, then fixed a double-tap bug and hid the controls until the screen is touched.
+Key lesson: a browser fires two events for one tap (a finger event and a "pretend" mouse event), so without de-duplication every tap counts twice. The browser build is also its own separate async version of the game — you can't drop desktop files straight into it.
+
 **2026-05-29 — Building a standalone Windows exe (v2.0)**
 Packaged the full-featured source code version into a double-click exe and offered both a ready-to-play build and a source code zip on itch.io. Fixed two PyInstaller path bugs before it would work: data files needed a `resource_path()` helper to find them inside the bundle, and save files needed redirecting away from the temp folder that gets deleted on close.
 Key lesson: PyInstaller uses your system's default Python — if that's not the version your game runs on, the exe builds silently but crashes at launch. Always specify the Python version explicitly.
@@ -53,5 +57,5 @@ Key lessons: browser environments are strict in ways desktop never is — diagno
 ## What's Next
 
 - Add background music that plays after the first user click (browser audio rules require this)
-- Mobile-friendly controls for browser play on phones
+- Fine-tune the new touch controls for smaller phone screens
 - Mac and Linux builds via GitHub Actions
